@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject, Observer } from 'rxjs';
+import { Observable, Subject, Observer, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import * as socketIo from 'socket.io-client';
-import { Router } from '@angular/router';
-
 
 
 @Injectable({
@@ -11,17 +9,19 @@ import { Router } from '@angular/router';
 })
 export class TestServiceService {
 
-  constructor(private http: HttpClient, public router: Router) { }
-
   incrementURL = 'http://localhost:9428/api/increment';
 
   socketURL = 'http://localhost:9428/';
 
+  increment: number;
+  incrementObs: BehaviorSubject<number> = new BehaviorSubject(this.increment);
 
-  private subject: Subject<MessageEvent>;
+  constructor(private http: HttpClient) {}
 
-  getIncrement(): Observable<number> {
-    return this.http.get<number>(this.incrementURL);
+  getIncrement() {
+    this.http.get<number>(this.incrementURL).subscribe((res) => {
+      this.incrementObs.next(res);
+    });
   }
 
   listen() {
@@ -31,14 +31,9 @@ export class TestServiceService {
       console.log('data:', data);
     });
 
-    socket.on('up', (data) => {
-      console.log('uped !', data);
-    });
-
     socket.on('mash', (data) => {
       console.log('mache !', data);
-      this.router.navigate(['waiter']);
-
+      this.getIncrement();
     });
   }
 
