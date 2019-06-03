@@ -1,12 +1,11 @@
 const { Router } = require('express');
 const { Internship } = require('../../models');
 
-
 const router = new Router();
 
 router.post('/', (req, res) => {
   try {
-    const internship = Internship.create(req.body);
+    const internship = Internship.create(req.body, req.query);
     res.status(201).json(internship);
   } catch (err) {
     if (err.name === 'ValidationError') {

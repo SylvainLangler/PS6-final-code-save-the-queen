@@ -36,6 +36,13 @@ module.exports = class BaseModel {
     return this.items;
   }
 
+  getById(id){
+    if (typeof id === 'string') id = parseInt(id, 10);
+    const item = this.items.find(i => i.id === id);
+    if (!item) throw new NotFoundError(`Cannot get ${this.name} id=${id} : not found`);
+    return item;
+  }
+
   create(obj = {}) {
     const item = Object.assign({}, obj, { id: Date.now() });
     const { error } = Joi.validate(item, this.schema);

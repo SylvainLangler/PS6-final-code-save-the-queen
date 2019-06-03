@@ -22,7 +22,7 @@
       </div>
       <div class="internship-info">
           <span class="label">Etudiant:</span>
-          <span> {{ internship.studentSurname }} {{ internship.studentName }}</span>
+          <span> {{ internship.student.firstName }} {{ internship.student.lastName }}</span>
       </div>
       <div class="internship-info">
         <p class="label">Site web<i class="fas fa-arrow-down ml-2"></i></p><a href="{{ internship.websiteURL }}"><p> {{ internship.websiteURL }}</p></a>
