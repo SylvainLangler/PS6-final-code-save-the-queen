@@ -5,10 +5,22 @@ const { Internship } = require('../../models');
 const router = new Router();
 
 router.post('/', (req, res) => {
+
+  const io = req.app.get('io');
+
+  io.emit('mash', "mashalla");
+
+  res.status(201).json('');
   try {
-    const internship = Internship.create(req.body);
-    res.status(201).json(internship);
+    // const internship = Internship.create(req.body);
+    // res.status(201).json(internship);
+
+    // TODO on post envoyer reponse socket
+    // io.emit('up', "up");
+    // module.get()
+
   } catch (err) {
+
     if (err.name === 'ValidationError') {
       res.status(400).json(err.extra);
     } else {
@@ -33,7 +45,7 @@ router.get('/', (req, res) => {
 router.post('/set_validity', (req, res) => {
   try {
     const hasBeenValidated = Internship.setValidity(req.body);
-    if(hasBeenValidated){
+    if (hasBeenValidated) {
       res.status(200).json('ok');
     } else {
       res.status(200).json('ko');

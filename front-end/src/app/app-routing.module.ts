@@ -8,6 +8,7 @@ import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { AgencyListComponent } from './agencies/agency-list/agency-list.component';
 import { InternshipFormComponent } from './internships/internship-form/internship-form.component';
 import { CountryUniversitiesComponent } from './universities/country-universities/country-universities.component';
+import { WaiterComponent } from './waiter/waiter.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'anciens-eleves', component: FormerStudentListComponent},
   {path: 'universites', component: CountryUniversitiesComponent},
   {path: 'accueil', component: HomeCardsComponent},
+  {path: 'waiter', component: WaiterComponent},
   {path: '', redirectTo: '/accueil', pathMatch: 'full'}
 ];
 

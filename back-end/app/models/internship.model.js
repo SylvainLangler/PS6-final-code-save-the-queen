@@ -211,7 +211,7 @@ class InternshipModel extends BaseModel {
 
     // Building paginations infos
     const nbTotalElements = this.filteredInternships.length;
-    console.log("totel elements : ", nbTotalElements);
+    // console.log("totel elements : ", nbTotalElements);
     InternshipModel.checkPaginationParams(q);
     const paginator = new Paginator(q.elemPerPage, q.linkPerPage);
     const pagination_info = paginator.build(nbTotalElements, q.page);
