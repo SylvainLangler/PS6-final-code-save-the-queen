@@ -1,0 +1,74 @@
+[ 
+    { 
+        "firstName": "Jeanne",
+        "lastName": "Dupont",
+        "yearAbroad": 2015,
+        "firstYear": 2014,
+        "lastYear": 2015,
+        "country": "Italie",
+        "internship": "internship",
+        "section": "SI",
+        "contact": "jeanne.dupont@gmail.com",
+        "photo": "https://randomuser.me/api/portraits/women/49.jpg"
+    },
+    { 
+        "firstName": "Alexis",
+        "lastName": "Lato",
+        "yearAbroad": 2014,
+        "firstYear": 2013,
+        "lastYear": 2014,
+        "country": "France",
+        "internship": "internship",
+        "section": "GE",
+        "contact": "alexis.lato@gmail.com",
+        "photo": "https://randomuser.me/api/portraits/men/49.jpg"
+    },
+    { 
+        "firstName": "Martin",
+        "lastName": "Patis",
+        "yearAbroad": 2014,
+        "firstYear": 2013,
+        "lastYear": 2014,
+        "country": "Italie",
+        "internship": "internship",
+        "section": "SI",
+        "contact": "martin.patis@gmail.com",
+        "photo": "https://randomuser.me/api/portraits/men/28.jpg"
+    },
+    { 
+        "firstName": "Estelle",
+        "lastName": "Martin",
+        "yearAbroad": 2016,
+        "firstYear": 2015,
+        "lastYear": 2016,
+        "country": "Canada",
+        "internship": "internship",
+        "section": "GE",
+        "contact": "estelle.martin@gmail.com",
+        "photo": "https://randomuser.me/api/portraits/women/27.jpg"
+    },
+    { 
+        "firstName": "Jean",
+        "lastName": "Abbes",
+        "yearAbroad": 2016,
+        "firstYear": 2015,
+        "lastYear": 2016,
+        "country": "Italie",
+        "internship": "internship",
+        "section": "SI",
+        "contact": "jean.abbes@gmail.com",
+        "photo": "https://randomuser.me/api/portraits/men/40.jpg"
+    },
+    { 
+        "firstName": "Didier",
+        "lastName": "Rabon",
+        "yearAbroad": 2014,
+        "firstYear": 2013,
+        "lastYear": 2014,
+        "country": "Canada",
+        "internship": "internship",
+        "section": "SI",
+        "contact": "didier.rabon@gmail.com",
+        "photo": "https://randomuser.me/api/portraits/men/48.jpg"
+    }
+]

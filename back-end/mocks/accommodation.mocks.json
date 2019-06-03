@@ -1,0 +1,52 @@
+[
+	{
+        "country": "France",
+        "adress": "4 rue Raoul Follereau, 13200 Arles",
+        "price": 450,
+        "devise": "€",
+        "surface": 25,
+        "contact": "residence.cyclades@gmail.com",
+        "websiteURL": "http://www.cyclades.fr",
+        "etudiant": "Jean Palo"
+    },
+    {
+        "country": "Canada",
+        "adress": "2 rue saint Thomas, Toronto",
+        "price": 550,
+        "devise": "$",
+        "surface": 23,
+        "contact": "",
+        "websiteURL": "http://www.ontario-immo.ca/",
+        "etudiant": "Rémy Jean"
+    },
+    {
+        "country": "Italie",
+        "adress": "6 rue du Pape, Rome",
+        "price": 550,
+        "devise": "€",
+        "surface": 21,
+        "contact": "",
+        "websiteURL": "",
+        "etudiant": "Sylvain Jean"
+    },
+    {
+        "country": "Canada",
+        "adress": "3 rue saint Thomas, Toronto",
+        "price": 500,
+        "devise": "$",
+        "surface": 23,
+        "contact": "",
+        "websiteURL": "http://www.ontario-immo.ca/",
+        "etudiant": "Philippe Roche"
+    },
+    {
+        "country": "Canada",
+        "adress": "8 avenue Wilson , Toronto",
+        "price": 540,
+        "devise": "$",
+        "surface": 20,
+        "contact": "",
+        "websiteURL": "http://www.ontario-immo.ca/",
+        "etudiant": "Julien Magaud"
+    }
+]
