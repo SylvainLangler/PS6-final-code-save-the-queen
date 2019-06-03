@@ -20,8 +20,8 @@ export class TestServiceService {
 
   private subject: Subject<MessageEvent>;
 
-  increment(): Observable<number> {
-    return this.http.post<number>(this.incrementURL, '');
+  getIncrement(): Observable<number> {
+    return this.http.get<number>(this.incrementURL);
   }
 
   listen() {
@@ -37,7 +37,7 @@ export class TestServiceService {
 
     socket.on('mash', (data) => {
       console.log('mache !', data);
-      this.router.navigate(['accueil']);
+      this.router.navigate(['waiter']);
 
     });
   }

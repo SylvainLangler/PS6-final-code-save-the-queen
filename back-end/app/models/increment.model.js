@@ -8,11 +8,15 @@ class IncrementModel extends BaseModel {
     });
   }
 
-  increment(){
-  	this.load();
+  increment() {
+    this.load();
     this.items[0].value += 1;
     this.update(this.items[0].id, this.items[0]);
     return this.items[0];
+  }
+
+  getValue() {
+    return this.items[0].value;
   }
 }
 

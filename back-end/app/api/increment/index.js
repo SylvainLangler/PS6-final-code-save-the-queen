@@ -6,6 +6,10 @@ const router = new Router();
 router.post('/', (req, res) => {
   try {
     const increment = Increment.increment();
+
+    const io = req.app.get('io');
+    io.emit('mash', "mashalla");
+  
     res.status(201).json(increment);
   } catch (err) {
     if (err.name === 'ValidationError') {
@@ -16,10 +20,11 @@ router.post('/', (req, res) => {
   }
 });
 
-/*router.get('/', (req, res) => {
+router.get('/', (req, res) => {
   try {
-    const result = Increment.increment();
-    res.status(200).json(result);
+    console.log('value : ', Increment.getValue());
+    
+    res.status(200).json(Increment.getValue());
   } catch (err) {
     if (err.name === 'ValidationError') {
       res.status(400).json(err.extra);
@@ -27,6 +32,6 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     }
   }
-});*/
+});
 
 module.exports = router;

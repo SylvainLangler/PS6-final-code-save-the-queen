@@ -5,18 +5,9 @@ const router = new Router();
 
 router.post('/', (req, res) => {
 
-  const io = req.app.get('io');
-
-  io.emit('mash', "mashalla");
-
-  res.status(201).json('');
   try {
-    // const internship = Internship.create(req.body);
-    // res.status(201).json(internship);
-
-    // TODO on post envoyer reponse socket
-    // io.emit('up', "up");
-    // module.get()
+    const internship = Internship.create(req.body);
+    res.status(201).json(internship);
 
   } catch (err) {
 
