@@ -1,105 +1,46 @@
 const { Router } = require('express');
 const { Internship } = require('../../models');
+const CommonMids = require('../../utils/common-mids.js');
 
 const router = new Router();
 
-router.post('/', (req, res) => {
+router.post('/', CommonMids.catchError, (req, res) => {
+  const internship = Internship.create(req.body);
+  res.status(201).json(internship);
+});
 
-  try {
-    const internship = Internship.create(req.body);
-    res.status(201).json(internship);
+router.get('/', CommonMids.catchError, (req, res) => {
+  const internships = Internship.getInternships(req.query);
+  res.status(200).json(internships);
+});
 
-  } catch (err) {
-
-    if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra);
-    } else {
-      res.status(500).json(err);
-    }
+router.post('/set_validity', CommonMids.catchError, (req, res) => {
+  const hasBeenValidated = Internship.setValidity(req.body);
+  if (hasBeenValidated) {
+    res.status(200).json('ok');
+  } else {
+    res.status(200).json('ko');
   }
 });
 
-router.get('/', (req, res) => {
-  try {
-    const internships = Internship.getInternships(req.query);
-    res.status(200).json(internships);
-  } catch (err) {
-    if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra);
-    } else {
-      res.status(500).json(err);
-    }
-  }
+router.get('/statistics', CommonMids.catchError, (req, res) => {
+  const stats = Internship.getStatistics();
+  res.status(200).json(stats);
 });
 
-router.post('/set_validity', (req, res) => {
-  try {
-    const hasBeenValidated = Internship.setValidity(req.body);
-    if (hasBeenValidated) {
-      res.status(200).json('ok');
-    } else {
-      res.status(200).json('ko');
-    }
-  } catch (err) {
-    if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra);
-    } else {
-      res.status(500).json(err);
-    }
-  }
+router.get('/max_duration', CommonMids.catchError, (req, res) => {
+  const maxDuration = Internship.getMaxDuration();
+  res.status(200).json(maxDuration);
 });
 
-router.get('/statistics', (req, res) => {
-  try {
-    const stats = Internship.getStatistics();
-    res.status(200).json(stats);
-  } catch (err) {
-    if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra);
-    } else {
-      res.status(500).json(err);
-    }
-  }
+router.get('/available_countries', CommonMids.catchError, (req, res) => {
+  const countries = Internship.getAvailableCountries();
+  res.status(200).json(countries);
 });
 
-router.get('/max_duration', (req, res) => {
-  try {
-    const maxDuration = Internship.getMaxDuration();
-    res.status(200).json(maxDuration);
-  } catch (err) {
-    console.log(err);
-    if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra);
-    } else {
-      res.status(500).json(err);
-    }
-  }
-});
-
-router.get('/available_countries', (req, res) => {
-  try {
-    const countries = Internship.getAvailableCountries();
-    res.status(200).json(countries);
-  } catch (err) {
-    if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra);
-    } else {
-      res.status(500).json(err);
-    }
-  }
-});
-
-router.get('/available_sections', (req, res) => {
-  try {
-    const sections = Internship.getAvailableSections();
-    res.status(200).json(sections);
-  } catch (err) {
-    if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra);
-    } else {
-      res.status(500).json(err);
-    }
-  }
+router.get('/available_sections', CommonMids.catchError, (req, res) => {
+  const sections = Internship.getAvailableSections();
+  res.status(200).json(sections);
 });
 
 module.exports = router;
