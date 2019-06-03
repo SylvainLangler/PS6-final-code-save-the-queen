@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0277BD</color>
+    <color name="colorPrimaryDark">#1565C0</color>
+    <color name="colorAccent">#283593</color>
+    <color name="fui_transparent">#00000000</color>
+    <color name="colorGreenApple">#61bb49</color>
+    <color name="colorYellowApple">#fbb927</color>
+    <color name="colorOrangeApple">#f6821f</color>
+    <color name="colorRedApple">#e03a3e</color>
+    <color name="colorPurpleApple">#963d97</color>
+    <color name="colorBlueApple">#009ddc</color>
+
+
+</resources>

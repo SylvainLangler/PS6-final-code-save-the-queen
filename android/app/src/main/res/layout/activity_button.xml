@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonActivity">
+
+    <Button
+        android:id="@+id/buttonValider"
+        android:layout_width="297dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/roundbuttongreen"
+        android:fontFamily="@font/amiko"
+        android:onClick="buttonClick"
+        android:text="Valider"
+        android:textAllCaps="false"
+        android:textColor="@color/colorGreenApple"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRefuser"
+        android:layout_width="297dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="buttonClick"
+        android:background="@drawable/roundbuttonred"
+        android:fontFamily="@font/amiko"
+        android:text="Refuser"
+        android:textAllCaps="false"
+        android:textColor="@color/colorRedApple"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonValider" />
+
+    <Button
+        android:id="@+id/buttonRetard"
+        android:layout_width="297dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="buttonClick"
+        android:background="@drawable/roundbuttonblue"
+        android:fontFamily="@font/amiko"
+        android:text="Retard"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBlueApple"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIncomplet" />
+
+    <Button
+        android:id="@+id/buttonIncomplet"
+        android:layout_width="297dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="buttonClick"
+        android:background="@drawable/roundbuttonorange"
+        android:fontFamily="@font/amiko"
+        android:text="Incomplet"
+        android:textAllCaps="false"
+        android:textColor="@color/colorOrangeApple"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRefuser" />
+
+
+</android.support.constraint.ConstraintLayout>
