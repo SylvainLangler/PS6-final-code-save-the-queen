@@ -1,0 +1,26 @@
+.logo-accommodation{
+    height:70px;
+    margin-left:2em;
+}
+
+.accommodation-title{
+    height:0.8em;
+}
+
+.accommodation{
+    margin:0.5em;
+    margin-top:1.2em;
+    margin-bottom:1em;
+}
+
+.label{
+    font-weight:bold;
+}
+
+.accommodation-info{
+    margin-bottom:.3em;
+}
+
+a{
+    text-decoration: underline;
+}

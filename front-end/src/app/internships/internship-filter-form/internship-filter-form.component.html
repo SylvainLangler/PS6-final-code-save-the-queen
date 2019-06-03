@@ -1,0 +1,101 @@
+<div class="column">
+  <div class="recherche">
+    <div *ngIf="isAnyFilterActive">
+      <h4>Filtres actifs</h4>
+      <div *ngFor="let filter of availableFilters" class="active-filter col" (click)="cancelFilter(filter.name)">
+        <div *ngIf="filter.value" class="row">
+          <div class="icone-fermer col-2"><i class="fas fa-times fa-2x" aria-hidden="true"></i></div>
+          <div class="col-10 p-0">
+            <div class="row">
+              <div class="col-4"><span>{{filter.display_name}} </span></div>
+              <div class="col-8">
+                <span *ngIf="filter.name != 'duration' && filter.name != 'lab' ">{{filter.value}}</span>
+                <span *ngIf="filter.name == 'duration'">{{filter.value[0]}} à {{filter.value[1]}} semaines</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form [formGroup]="filterForm" (keydown)="keyPressed($event)">
+      <h4>Recherche</h4>
+      <div class="filter-form">
+        
+        <label for="title" class="input-text">
+          <div class="row">
+            <div class="col">
+              <input placeholder="Titre" class="input-custom" type="text" id="title" [formControlName]="'title'">
+            </div>
+          </div>
+        </label>
+
+        <label for="company" class="input-text">
+          <div class="row">
+            <div class="col">
+              <input placeholder="Entreprise" class="input-custom" type="text" id="company" [formControlName]="'company'">
+            </div>
+          </div>
+        </label>
+
+        <label for="section" class="input-select">
+          <div class="row">
+            <div class="col">
+              <select class="form-control" id="section" [formControlName]="'section'">
+                <option value="">Section</option>
+                <option *ngFor="let sectionName of availableSectionNames" [ngValue]="sectionName">
+                  {{sectionName}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </label>
+
+        <label for="country" class="input-select">
+          <div class="row">
+            <div class="col">
+              <select class="form-control" id="country" [formControlName]="'country'">
+                <option value="">Pays de destination</option>
+                <option *ngFor="let countryName of availableCountryNames" [ngValue]="countryName">
+                  {{countryName}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </label>
+
+        <label for="schoolYear" class="input-select">
+          <div class="row">
+            <div class="col">
+              <select class="form-control" id="schoolYear" [formControlName]="'schoolYear'">
+                <option value="">Année</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+              </select>
+            </div>
+          </div>
+        </label>
+
+        <label for="duration" class="duration">
+          <p>Durée du stage (en semaines):</p>
+          <ng5-slider [formControlName]="'duration'" id="duration" [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+        </label>
+
+        <p class="ml-2 lab">Stages en laboratoire</p>
+
+        <label class="switch" for="lab">
+          <input type="checkbox" id="lab" [formControlName]="'lab'">
+          <span class="switch-slider round"></span>
+        </label>
+        
+      </div>
+
+      <button type="button" class="btn filter-btn" data-toggle="button" aria-pressed="false" autocomplete="off" (click)="filter()" >
+        Valider
+      </button>
+    </form>
+  </div>
+</div>

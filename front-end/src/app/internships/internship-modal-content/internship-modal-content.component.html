@@ -1,0 +1,55 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">{{internship.title}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-content-info">
+      <span class="label">Entreprise: </span>
+      <span>{{ internship.company }}</span>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Ville: </span>
+      <span>{{ internship.city }}</span>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Durée: </span>
+      <span>{{ internship.durationNbWeek }} semaines</span>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Année: </span>
+      <span>{{ internship.schoolYear }}</span>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Etudiant: </span>
+      <span>{{ internship.studentSurname }} {{ internship.studentName }}</span>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Rémunération: </span>
+      <span>{{ internship.salary }} {{ internship.currency }}</span><span *ngIf="internship.salary != 0"> par mois</span>
+    </div>
+    <div class="cout-vie">
+      <span class="label">Coût de la vie: </span>
+      <i class="fas fa-dollar-sign green-dollar" *ngFor="let dollar of getGreenDollarArray(internship.costOfLife)" title="{{ internship.costOfLife }} / 5"></i>
+      <i class="fas fa-dollar-sign grey-dollar" *ngFor="let greydollar of getGreyDollarArray(internship.costOfLife)" title="{{ internship.costOfLife }} / 5"></i>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Ambiance au sein de l'entreprise: </span>
+      <span>{{ internship.ambience }}</span>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Description: </span>
+      <span>{{ internship.description }}</span>
+    </div>
+    <div *ngIf="internship.lab" class="modal-content-info">
+        <span class="contact">Tuteur: </span><a href="mailto:{{ internship.tutorMail }}"><span>{{ internship.tutorMail }}</span></a>
+    </div>
+    <div class="modal-content-info">
+      <span class="label">Site web: </span>
+      <a href="{{ internship.websiteURL }}">{{ internship.websiteURL }}</a>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">Fermer</button>
+</div>

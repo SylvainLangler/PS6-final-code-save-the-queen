@@ -1,0 +1,26 @@
+.page-link{
+    cursor:pointer;
+    background-color:white;
+}
+
+.pagination-component{
+    margin-top:-5em;
+    margin-left:2em;
+}
+
+@media (max-width:1500px){
+    .pagination-component{
+        margin-left:0;
+    }
+}
+
+@media (max-width:992px){
+    .pagination-component{
+        margin-top:0;
+    }
+}
+
+.active{
+	background-color: #003c68;
+    color: white !important;
+}

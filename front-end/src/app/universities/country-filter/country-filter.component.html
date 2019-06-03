@@ -1,0 +1,10 @@
+<div #base class="base"></div>
+<div class="column">
+ <div>
+    <div class="country-flag mt-1" *ngFor="let countryname of countrys" (click)="scroll(base)">
+      <div (click)="getSelectedCountry(countryname);currentCountry = countryname" class="country-flag-content" [ngClass]="{'active-country': countryname === currentCountry }">
+          <img src="{{countryname.FlagApi}}"/>
+          {{countryname.Name}}
+      </div>
+    </div>
+</div>

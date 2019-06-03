@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-lg-3 left-column">
+    <app-home-left-column></app-home-left-column>
+  </div>
+  <div class="col-lg-9 categories">
+        <div class="row justify-content-center">
+            <div class="card col-lg-5 p-0">
+                <img class="card-img-top" src="assets/images/stages2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <a class="btn btn-4" [routerLink]="[ '/stages' ]" routerLinkActive="active">Découverte des anciens stages</a>
+                </div>
+            </div>
+            <div class="card col-lg-5 p-0">
+                <img class="card-img-top" src="assets/images/logements.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <a class="btn btn-4"[routerLink]="[ '/logements' ]" routerLinkActive="active">Découverte des logements</a>
+                </div>
+            </div>
+        </div>
+    <div class="row justify-content-center">
+        <div class="card col-lg-5 p-0">
+            <img class="card-img-top" src="assets/images/anciens_eleves.jpg" alt="Card image cap">
+            <div class="card-body">
+                <a class="btn btn-4" [routerLink]="[ '/anciens-eleves' ]" routerLinkActive="active">Découverte des anciens élèves</a>
+            </div>
+        </div>
+        <div class="card col-lg-5 p-0">
+            <img class="card-img-top" src="assets/images/universites.jpg" alt="Card image cap">
+            <div class="card-body">
+                <a class="btn btn-4" [routerLink]="[ '/universites' ]" routerLinkActive="active">Découverte des universités</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+

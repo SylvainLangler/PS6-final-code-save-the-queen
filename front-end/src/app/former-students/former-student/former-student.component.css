@@ -1,0 +1,35 @@
+.formerStudent-title{
+    height:0.8em;
+}
+
+.formerStudent{
+    margin:0.5em;
+    margin-top:1.2em;
+    margin-bottom:1em;
+}
+
+.card-header{
+    background-color:#003c68;
+    color:white;
+}
+
+.label{
+    font-weight:bold;
+}
+
+.formerStudent-info{
+    margin-bottom:.3em;
+}
+
+.formerStudent img{
+    margin-top:1em;
+}
+
+.contact{
+    margin:0;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: underline;
+}

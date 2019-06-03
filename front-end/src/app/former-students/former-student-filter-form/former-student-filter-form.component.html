@@ -1,0 +1,73 @@
+<div class="column">
+  <div class="recherche">
+    <div *ngIf="isAnyFilterActive">
+      <h4>Filtres actifs</h4>
+      <div *ngFor="let filter of availableFilters" class="active-filter col" (click)="cancelFilter(filter.name)">
+        <div *ngIf="filter.value" class="row">
+          <div class="icone-fermer col-2"><i class="fas fa-times fa-2x" aria-hidden="true"></i></div>
+          <div class="col-10 p-0">
+            <div class="row">
+              <div class="col-4"><span>{{filter.display_name}} </span></div>
+              <div class="col-8">
+                <span>{{filter.value}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <form [formGroup]="filterForm" (keydown)="keyPressed($event)">
+      <h4>Recherche</h4>
+      <div class="filter-form">
+        <label for="firstName" class="input-text">
+          <div class="row">
+            <div class="col">
+              <input placeholder="Prénom" class="input-custom" type="text" id="firstName" [formControlName]="'firstName'">
+            </div>
+          </div>
+        </label>
+        
+        <label for="lastName" class="input-text">
+          <div class="row">
+            <div class="col">
+              <input placeholder="Nom" class="input-custom" type="text" id="lastName" [formControlName]="'lastName'">
+            </div>
+          </div>
+        </label>
+        
+  
+        <label for="section" class="input-select">
+          <div class="row">
+            <div class="col">
+              <select class="form-control" id="section" [formControlName]="'section'">
+                <option value="">Section</option>
+                <option *ngFor="let sectionName of availableSectionNames" [ngValue]="sectionName">
+                  {{sectionName}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </label>
+  
+        <label for="country" class="input-select">
+          <div class="row">
+            <div class="col">
+              <select class="form-control" id="country" [formControlName]="'country'">
+                <option value="">Pays de destination</option>
+                <option *ngFor="let countryName of availableCountryNames" [ngValue]="countryName">
+                  {{countryName}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </label>
+        
+      </div>
+  
+      <button type="button" class="btn filter-btn" data-toggle="button" aria-pressed="false" autocomplete="off" (click)="filter()" >
+        Valider
+      </button>
+    </form>
+  </div>
+</div>

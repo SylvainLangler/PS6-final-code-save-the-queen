@@ -1,0 +1,13 @@
+.left-column {
+    padding: 0;
+    background: #007ea7;
+    min-height: 778px;
+}
+
+.no-filters {
+    margin-top: 8rem;
+}
+
+.logo {
+    width: 1000px;
+}

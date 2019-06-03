@@ -1,0 +1,19 @@
+<div class="pagination-component" *ngIf="pagination_info.total_results > 0">
+	<!--<div class="description">
+		<span class="page-counts">{{ getFirstOfPage() }} - {{ getLastOfPage() }} sur {{ pagination_info.total_results }}</span>
+		<span class="page-totals" *ngIf="pagination_info.total_pages > 1">  {{ pagination_info.total_pages }} pages</span>
+		<span class="page-totals" *ngIf="pagination_info.total_pages <= 1">  {{ pagination_info.total_pages }} page</span>
+	</div>-->
+	<ul class="pagination">
+		<button class="btn" (click)="onPrev()" [disabled]="pagination_info.current_page === 1 || loading" [ngClass]="{ 'disabled': pagination_info.current_page === 1 || loading }"><i class="fas fa-chevron-left"></i></button>
+		
+		<li class="page-item" *ngFor="let pageNum of getPages()">
+			<a class="page-link" 
+			(click)="onPage(pageNum)"
+			[ngClass]="{'active': pageNum === pagination_info.current_page, 'disabled': loading}">{{ pageNum }}
+			</a>
+		</li>
+
+		<button class="btn" (click)="onNext(true)" [disabled]="pagination_info.last_page === pagination_info.current_page  || loading" [ngClass]="{ 'disabled': pagination_info.last_page === pagination_info.current_page || loading }"><i class="fas fa-chevron-right"></i></button>
+	</ul>
+</div>

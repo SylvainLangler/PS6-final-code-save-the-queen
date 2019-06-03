@@ -1,0 +1,17 @@
+.left-column {
+    padding: 0;
+    background: #007ea7;
+    min-height: 800px;
+}
+
+.accommodation-list {
+    margin-top: 10px;
+}
+
+.no-filters {
+    margin-top: 8rem;
+}
+
+.logo {
+    width: 900px;
+}

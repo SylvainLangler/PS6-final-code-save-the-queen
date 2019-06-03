@@ -1,0 +1,37 @@
+<div class="card internship">
+  <div class="card-header">
+      <h6 class="text-center internship-title">{{ internship.title }}<i class="far fa-keyboard ml-2" *ngIf=" internship.section  == 'SI'"></i></h6>
+  </div>
+  <div class="card-body">
+      <div class="internship-info">
+          <p class="d-inline mr-3 label">Pays:</p>
+          <img class="img-country" src="{{ internship.countryFlag }}">
+          <i *ngIf="internship.salary != 0" class="fas fa-dollar-sign float-right"></i>
+      </div>
+      <div class="internship-info">
+        <span class="label">Entreprise:</span>
+        <span> {{ internship.company }}</span>
+      </div>
+      <div class="internship-info">
+          <span class="label">Durée:</span>
+          <span> {{ internship.durationNbWeek }} semaines</span>
+      </div>
+      <div class="internship-info">
+          <span class="label">Année:</span>
+          <span> {{ internship.schoolYear }} </span>
+      </div>
+      <div class="internship-info">
+          <span class="label">Etudiant:</span>
+          <span> {{ internship.studentSurname }} {{ internship.studentName }}</span>
+      </div>
+      <div class="internship-info">
+        <p class="label">Site web<i class="fas fa-arrow-down ml-2"></i></p><a href="{{ internship.websiteURL }}"><p> {{ internship.websiteURL }}</p></a>
+      </div>
+      <div class="text-center mt-2">
+        <button type="button" class="decouvrir_stage_btn btn" (click)="openModalWithComponent(internship)"><i class="fas fa-arrow-right"></i>&nbsp;&nbsp;En savoir plus</button>
+      </div>
+  </div>
+</div>
+
+  
+  

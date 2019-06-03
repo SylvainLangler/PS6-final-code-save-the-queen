@@ -1,0 +1,36 @@
+<div  class="header menu sticky-top">
+  <ul class="nav"> 
+      <li class="nav-item logo-nav"><a routerLinkActive="active" [routerLink]="[ '/accueil' ]" ><img class="logo" src="assets/images/logo-nav.png">POLYTECH ETRANGER</a></li>
+      <li class="nav-space hamburger" (click)="toggleMobileMenu()"><i class="fas fa-bars fa-2x"></i></li>
+      <li class="nav-item"><a [routerLink]="[ '/accueil' ]" routerLinkActive="active">Accueil</a></li>
+      <li class="nav-item"><a [routerLink]="[ '/stages' ]" routerLinkActive="active">Stages</a></li>
+      <li class="btn-group dropdown-logements" dropdown  routerLinkActive="active">
+          <div dropdownToggle class="dropdown-toggle">
+              <span>Logements</span>
+            <span class="caret"></span>
+          </div>
+          <ul class="dropdown-menu" role="menu">
+            <li role="menuitem">
+              <a class="dropdown-item" href="#" [routerLink]="[ '/agences-immobilieres' ]" routerLinkActive="active">Agences</a>
+            </li>
+            <li role="menuitem">
+              <a class="dropdown-item" href="#" [routerLink]="[ '/logements' ]" routerLinkActive="active">Logements d'anciens étudiants</a>
+            </li>
+          </ul>
+        </li>
+      <li class="nav-item"><a [routerLink]="[ '/anciens-eleves' ]" routerLinkActive="active">Etudiants</a></li>
+      <li class="nav-item"><a [routerLink]="[ '/universites' ]" routerLinkActive="active">Universités</a></li>
+  </ul>
+</div>
+
+<div class="menu_mobile" *ngIf="mobileMenuDisplayed">
+  <ul class="nav"> 
+    <li class="nav-space hamburger" (click)="toggleMobileMenu()"><i class="fas fa-bars fa-2x"></i></li>
+    <li class="nav-item" (click)="toggleMobileMenu()"><a [routerLink]="[ '/accueil' ]" routerLinkActive="active">Accueil</a></li>
+    <li class="nav-item" (click)="toggleMobileMenu()"><a [routerLink]="[ '/stages' ]" routerLinkActive="active">Stages</a></li>
+    <li class="nav-item" (click)="toggleMobileMenu()"><a [routerLink]="[ '/agences-immobilieres' ]" routerLinkActive="active">Agences</a></li>
+    <li class="nav-item" (click)="toggleMobileMenu()"><a [routerLink]="[ '/logements' ]" routerLinkActive="active">Logements d'anciens étudiants</a></li>
+    <li class="nav-item" (click)="toggleMobileMenu()"><a [routerLink]="[ '/anciens-eleves' ]" routerLinkActive="active">Etudiants</a></li>
+    <li class="nav-item" (click)="toggleMobileMenu()"><a [routerLink]="[ '/universites' ]" routerLinkActive="active">Universités</a></li>
+  </ul>
+</div>

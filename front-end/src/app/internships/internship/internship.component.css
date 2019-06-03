@@ -1,0 +1,60 @@
+.internship p{
+	margin-bottom:5px;
+}
+
+.decouvrir_stage_btn{
+    width: 250px;
+    color: #003c68;
+    height: 50px;
+    border-color: #003c68;
+    font-size: 18px;
+}
+
+.decouvrir_stage_btn:hover {
+    color:white;
+    background-color:#003c68;
+	border-color:  #003c68;
+}
+
+.decouvrir_stage_btn:focus{
+	box-shadow: none;
+}
+
+.internship-title{
+	height:0.8em;
+}
+
+.img-country{
+    margin-top:-1em;
+}
+
+a{
+    text-decoration:underline;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+.card-header{
+    background-color:#003c68;
+    color:white;
+}
+
+.internship{
+    margin:0.5em;
+    margin-top:1.2em;
+    margin-bottom:1em;
+}
+
+.label{
+    font-weight:bold;
+}
+
+.internship-info{
+    padding:3px;
+}
+
+.internship-info .fa-dollar-sign{
+    color:green;
+}

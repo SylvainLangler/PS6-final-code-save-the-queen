@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-lg-3 left-column">
+		<app-accommodation-filter-form></app-accommodation-filter-form>
+	</div>
+	<div *ngIf="isFilterApplied == false" class="text-center no-filters col-lg-9">
+			<img class="logo" src="https://image.noelshack.com/fichiers/2019/21/7/1558893877-logement.png" alt="POLYTECH ETRANGER"/>
+	</div>
+	<div *ngIf="isFilterApplied" class="col-lg-8" id="accommodations">
+		<div class="accommodation-list row"> 
+			<div class="col-xl-6" *ngFor="let accommodation of accommodationList">
+				<app-accommodation [accommodation]="accommodation"></app-accommodation>
+			</div>
+		</div>
+  </div>
+</div>
+<div *ngIf="isFilterApplied" class="row">
+	<div class="offset-lg-10 col-pagination">
+		<div *ngIf="pagination_info">
+			<app-my-pagination
+				(goPage)="goToPage($event)"
+				(goNext)="onNext()"
+				(goPrev)="onPrev()"
+				[pagination_info]="pagination_info">
+			</app-my-pagination>
+		</div>
+	</div>
+</div>
+<app-footer></app-footer>

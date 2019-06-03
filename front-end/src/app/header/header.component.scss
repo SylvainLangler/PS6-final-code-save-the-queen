@@ -1,0 +1,172 @@
+@import '../../styles/variables';
+
+/**
+ Use :host to apply some style to your entire component
+ */
+:host {
+  color: $white;
+}
+
+.logo-nav{
+  position: absolute;
+  top: 7px;
+  left: 2%;
+}
+
+.logo{
+  margin-top:3px;
+  width:55px;
+  margin-right:20px;
+}
+
+.logo-nav .active{
+  display:none;
+}
+
+.nav{
+  justify-content: flex-end;
+  padding-right: 5em;
+  height:70px;
+}
+
+@media (max-width:1130px){
+  .nav{
+    margin:0;
+  }
+}
+
+.header {
+  //overflow: hidden;
+  background: #003c68;
+}
+
+.menu a:hover {
+  background-color:#e2f1ff;
+  color: black !important;
+}
+
+.header a{
+  transition:all .15s ease-in-out;
+}
+
+.menu .nav-item {
+  display:inline;
+  text-align:center;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.menu .nav-item a {
+  text-decoration:none;
+  color: white;
+  padding:1.1em;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+.menu .hamburger{
+  display:none;
+}
+
+.hamburger{
+  margin-top:.75em;
+}
+
+.menu_mobile .nav-item a{
+  text-decoration: none;
+  color:white;
+  padding:.5em;
+}
+
+.menu_mobile .nav-item{
+  margin:1.5em;
+  font-size:25px;
+}
+
+.menu_mobile{
+  background: #0b141e;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 2000;
+}
+
+.menu_mobile .nav{
+  display: inline;
+  text-align: center;
+}
+
+@media (max-width:1400px){
+  .logo-nav{
+    left:-14px;
+  }
+}
+
+@media (max-width:1280px){
+  .nav{
+    justify-content: center;
+    padding-right:0;
+  }
+  .logo-nav a{
+    display:none;
+  }
+}
+
+@media (max-width:879px){
+  .menu .nav-item a{
+    padding-right:0;
+    padding-left:0;
+    padding:1.1em;
+  }
+}
+
+.active{
+  background-color:#e2f1ff;
+  color: black !important;
+}
+
+@media (max-width:765px){
+  .menu .nav-item{
+    display:none;
+  }
+  .menu .hamburger{
+    display:initial;
+  }
+  .dropdown-logements{
+    display:none;
+  }
+}
+
+.dropdown-toggle{
+  margin:auto;
+  cursor:pointer;
+  padding-right:20px;
+  padding-left:20px;
+}
+
+.open>.dropdown-menu {
+  display: block;
+}
+
+ul.nav li.dropdown-logements:hover > ul.dropdown-menu {
+  display: block;    
+}
+
+.dropdown-logements:hover{
+  background-color:#e2f1ff;
+  color:black;
+}
+
+.dropdown-logements{
+  padding:10px;
+  transition:all .15s ease-in-out;
+}
+
+.dropdown-menu{
+  margin-top:0;
+}
+
+
+
+

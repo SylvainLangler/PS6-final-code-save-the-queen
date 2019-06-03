@@ -1,0 +1,30 @@
+.green-dollar{
+	color:green;
+	margin:1px;
+}
+
+.grey-dollar{
+	color:lightgrey;
+	margin:1px;
+}
+
+a{
+	text-decoration:underline;
+}
+
+.cout-vie{
+	margin-bottom:1em;
+}
+
+.modal-content-info{
+	margin-bottom:1em;
+}
+
+.label{
+	font-weight:bold;
+}
+
+.contact{
+    margin:0;
+    font-weight: bold;
+}

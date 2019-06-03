@@ -1,0 +1,48 @@
+.internship-list{
+  margin-top:10px;
+}
+
+.left-column{
+  padding:0;
+  background: #007ea7;
+  min-height:982px;
+}
+
+@media (max-width:992px){
+  .col-pagination{
+      margin:auto;
+  }
+}
+
+.sort-buttons{
+  margin-top:2.5em;
+}
+
+.sort-buttons button{
+  margin:.75em;
+}
+
+.sort-buttons button:active, .sort-buttons button:focus{
+  box-shadow:none;
+}
+
+.btn--enabled{
+  background-color: #acffc5;
+  color:black;
+}
+
+.btn--disabled{
+  background-color:lightgrey;
+  color:black;
+}
+
+#internships{
+  margin-left:3rem;
+  min-height:864px;
+}
+
+@media (max-width:1500px){
+  #internships{
+    margin-left:0;
+  }
+}

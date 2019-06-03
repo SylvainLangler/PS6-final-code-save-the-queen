@@ -1,0 +1,82 @@
+<div class="row">
+	<div class="col-lg-3 left-column">
+		<app-internship-filter-form></app-internship-filter-form>
+	</div>
+  	<div class="col-lg-7" id="internships" *ngIf="isFilterApplied">
+		<div class="internship-list row"> 
+			<div class="col-xl-6" *ngFor="let internship of internshipList">
+				<app-internship [internship]="internship"></app-internship>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-9 internships-stats mt-2" *ngIf="isFilterApplied == false && internshipStatistics">
+		<h3 class="text-center">Statistiques des stages effectués à l'étranger</h3>
+		<div class="row">
+			<div class="col-lg-6">
+				<canvas
+					*ngIf="internshipStatistics.internshipByCountry"
+					baseChart
+					id="statsInternByCountryChart"
+				    [chartType]="chartInternshipByCountryType"
+				    [datasets]="chartInternshipByCountryData"
+				    [labels]="chartInternshipByCountryLabels"
+				    [options]="chartInternshipByCountryOptions"
+				    [colors]="chartInternshipByCountryColors"></canvas>
+			</div>
+			<div class="col-lg-6">
+				<canvas
+					*ngIf="internshipStatistics.sectionPercentage"
+					baseChart
+					id="statsSectionPercentageChart"
+				    [chartType]="chartSectionPercentageType"
+				    [datasets]="chartSectionPercentageData"
+				    [labels]="chartSectionPercentageLabels"
+				    [options]="chartSectionPercentageOptions"
+				    [colors]="chartSectionPercentageColors"></canvas>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3">
+			</div>
+			<div class="col-lg-6">
+				<canvas
+					*ngIf="internshipStatistics.nbInternshipsPerDuration"
+					baseChart
+					id="statsNbInternshipsPerDurationIntervalChart"
+				    [chartType]="chartNbInternshipsPerDurationIntervalType"
+				    [datasets]="chartNbInternshipsPerDurationIntervalData"
+				    [labels]="chartNbInternshipsPerDurationIntervalLabels"
+				    [options]="chartNbInternshipsPerDurationIntervalOptions"
+				    [colors]="chartNbInternshipsPerDurationIntervalColors"
+				    [legend]="false"></canvas>
+			</div>
+			<div class="col-lg-3">
+			</div>
+		</div>
+	</div>
+	<!--
+	<div class="col-lg-2" *ngIf="isFilterApplied">
+		<div class="sort-buttons mt-5 ml-2">
+			<button type="button" class="btn" data-toggle="button" aria-pressed="false" autocomplete="off" (click)="sortDuration()" [class.btn--enabled]="durationSortState != 'disabled'" [class.btn--disabled]="durationSortState == 'disabled'">Trier par Durée 
+				<i *ngIf="durationSortState == 'desc'" class="fas fa-long-arrow-alt-down"></i>
+				<i *ngIf="durationSortState == 'asc'" class="fas fa-long-arrow-alt-up"></i>
+			</button>
+		</div>
+	</div>
+	-->
+</div>
+<div class="row" *ngIf="isFilterApplied">
+	<div class="offset-lg-10 col-pagination">
+		<div *ngIf="pagination_info">
+			<app-my-pagination
+				(goPage)="goToPage($event)"
+				(goNext)="onNext()"
+				(goPrev)="onPrev()"
+				[pagination_info]="pagination_info">
+			</app-my-pagination>
+		</div>
+	</div>
+</div>
+
+
+<app-footer></app-footer>

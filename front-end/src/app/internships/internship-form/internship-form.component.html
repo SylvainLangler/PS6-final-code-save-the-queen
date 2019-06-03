@@ -1,0 +1,136 @@
+<div class="row">
+    <div class="col-lg-3">
+        <br>
+        <h4>Formulaire Stage :</h4>
+        <form class="internshipform" [formGroup]="internshipform">
+            <label for="title">
+    Titre <br>
+    <input class="input-custom" type="text" id="title" [formControlName]="'title'">
+  </label>
+            <br>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Pays</label>
+                <select class="form-control" id="country" (change)="getSelectedCountry($event.target.value)" (ngModel)="country">
+        <option *ngFor="let country of listFlag" [ngValue]="country" >{{country.CountryName}}</option>
+    </select>
+            </div>
+            <br>
+            <label for="company">
+    Entreprise <br>
+    <input class="input-custom" type="text" id="company" [formControlName]="'company'">
+  </label>
+            <br>
+            <label for="durationNbWeek">
+    Durée ( En Semaine ) <br>
+    <select class="form-control"  name="duration" id="durationNbWeek" [formControlName]="'durationNbWeek'">
+    <option [ngValue]="1">1</option>
+    <option [ngValue]="2">2</option>
+    <option [ngValue]="3">3</option>
+    <option [ngValue]="4">4</option>
+    <option [ngValue]="5">5</option>
+    <option [ngValue]="6">6</option>
+    <option [ngValue]="7">7</option>
+    <option [ngValue]="8">8</option>
+    <option [ngValue]="9">9</option>
+    <option [ngValue]="10">10</option>
+    <option [ngValue]="11">11</option>
+    <option [ngValue]="12">12</option>
+    <option [ngValue]="13">13</option>
+    <option [ngValue]="14">14</option>
+    <option [ngValue]="15">15</option>
+    <option [ngValue]="16">16</option>
+    <option [ngValue]="17">17</option>
+    <option [ngValue]="18">18</option>
+    <option [ngValue]="19">19</option>
+    <option [ngValue]="20">20</option>
+    <option [ngValue]="21">21</option>
+    <option [ngValue]="22">22</option>
+    <option [ngValue]="23">23</option>
+    <option [ngValue]="24">24</option>
+    </select>
+  
+  
+  </label>
+            <br>
+            <label for="schoolYear">
+    Année Scolaire <br>
+    <input class="input-custom" type="text" id="schoolYear" [formControlName]="'schoolYear'">
+  </label>
+            <br>
+            <label for="section">
+    Section <br>
+    <select class="form-control" name="section" id="section" [formControlName]="'section'">
+    <option value="SI">SI</option>
+    <option value="GE">GE</option>
+    <option value="BAT">BAT</option>
+    <option value="ELEC">ELEC</option>
+    <option value="MAM">MAM</option>
+    </select>
+  </label>
+            <br>
+            <label for="description">
+    Description <br>
+    <input class="input-custom" type="text" id="description" [formControlName]="'description'">
+  </label>
+            <br>
+            <label for="city">
+    Ville <br>
+    <input class="input-custom" type="text" id="city" [formControlName]="'city'">
+  </label>
+            <br>
+            <label for="lab">
+    Type <br>
+    <select class="form-control" name="lab" id="lab" [formControlName]="'lab'">
+    <option [ngValue]="true">Laboratoire</option>
+    <option [ngValue]="false">Entreprise</option>
+    </select>
+  </label>
+            <br>
+            <label for="salary">
+    Salaire <br>
+    <input class="input-custom" type="number" id="salary" [formControlName]="'salary'">
+  </label>
+            <br>
+            <label for="websiteURL">
+    Site Web <br>
+    <input class="input-custom" type="text" id="websiteURL" [formControlName]="'websiteURL'">
+  </label>
+            <br>
+            <br>
+            <label for="ambience">
+    Ambience Globale <br>
+    <input class="input-custom" type="text" id="ambience" [formControlName]="'ambience'">
+  </label>
+            <br>
+            <label for="lab">
+    Note (/5) <br>
+    <select class="form-control" name="costOfLife" id="costOfLife" [formControlName]="'costOfLife'">
+    <option [ngValue]="0">0</option>
+    <option [ngValue]="1">1</option>
+    <option [ngValue]="2">2</option>
+    <option [ngValue]="3">3</option>
+    <option [ngValue]="4">4</option>
+    <option [ngValue]="5">5</option>
+    </select>
+  </label>
+            <br>
+            <label for="studentName">
+    NOM <br>
+    <input class="input-custom" type="text" id="studentName" [formControlName]="'studentName'">
+  </label>
+            <br>
+            <label for="studentSurname">
+    Prenom <br>
+    <input class="input-custom" type="text" id="studentSurname" [formControlName]="'studentSurname'">
+  </label>
+            <br>
+            <label for="tutorMail">
+    Mail Tuteur *(Laboratoire) <br>
+    <input class="input-custom" type="text" id="tutorMail" [formControlName]="'tutorMail'">
+  </label>
+            <br>
+            <button type="submit" class="btn-custom" (click)="addInternship()">Valider</button>
+
+        </form>
+    </div>
+</div>

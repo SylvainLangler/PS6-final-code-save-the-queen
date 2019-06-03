@@ -1,0 +1,22 @@
+<div class="card agency ">
+    <div class="card-header">
+        <h6 class="text-center agency-title">{{ agency.name }}<i class="far fa-keyboard ml-2"></i></h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3 pr-1">
+              <img class="img-fluid logo-agency" src="{{ agency.logoURL }}">
+            </div>
+            <div class="col-9">
+                <div class="agency-info">
+                    <span class="label">Pays: </span>
+                    <span>{{ agency.country }}</span>
+                </div>
+                <div class="agency-info">
+                    <span class="label">Site web: </span>
+                    <span><a href="{{ agency.websiteURL }}">{{ agency.websiteURL }}</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

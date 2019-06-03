@@ -1,0 +1,32 @@
+<div class="card formerStudent">
+    <div class="card-header">
+        <h6 class="text-center formerStudent-title">{{ formerStudent.firstName }} {{ formerStudent.lastName }}<i class="far fa-keyboard ml-2" *ngIf=" formerStudent.section  == 'SI'"></i></h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-4 pr-1">
+                <img class="img-fluid" src="{{ formerStudent.photo }}">
+            </div>
+            <div class="col-8">
+                <div class="formerStudent-info">
+                    <span class="label">Pays d'expatriation: </span>
+                    <span>{{ formerStudent.country }}</span>
+                </div>
+                <div class="formerStudent-info">
+                    <span class="label">Année: </span>
+                    <span> {{ formerStudent.yearAbroad }} </span>
+                </div>
+                <div class="formerStudent-info">
+                    <span class="label">Section: </span>
+                    <span> {{ formerStudent.section }} </span>
+                </div>
+                <div class="formerStudent-info">
+
+                    <p class="contact">Contact<i class="fas fa-arrow-down ml-2"></i></p><a href="mailto:{{ formerStudent.contact }}"><p> {{ formerStudent.contact }}</p></a>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

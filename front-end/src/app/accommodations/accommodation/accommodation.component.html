@@ -1,0 +1,28 @@
+<div class="card accommodation ">
+    <div class="card-body">
+        <div class="accommodation-info">
+            <span class="label">Pays: </span>
+            <span>{{ accommodation.country }}</span>
+        </div>
+        <div class="accommodation-info">
+            <span class="label">Adresse: </span>
+            <span>{{ accommodation.adress }}</span>
+        </div>
+        <div class="accommodation-info">
+            <span class="label">Surface: </span>
+            <span>{{ accommodation.surface }} m²</span>
+        </div>
+        <div class="accommodation-info">
+            <span class="label">Prix: </span>
+            <span>{{ accommodation.price }}  {{ accommodation.devise }}</span>
+        </div>
+        <div class="accommodation-info">
+            <span class="label">Etudiant: </span>
+            <span>{{ accommodation.etudiant }}</span>
+        </div>
+        <div class="accommodation-info">
+          <span class="label">Site web: </span>
+          <span><a href="{{ accommodation.websiteURL }}">{{ accommodation.websiteURL }}</a></span>
+        </div>
+    </div>
+</div>
