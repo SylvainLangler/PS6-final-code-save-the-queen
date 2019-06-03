@@ -9,9 +9,13 @@ import * as socketIo from 'socket.io-client';
 })
 export class TestServiceService {
 
-  incrementURL = 'http://localhost:9428/api/increment';
+  incrementURL = 'https://sylvainlangler.alwaysdata.net/api/increment';
+  // incrementURL = 'http://192.168.43.181:9428/api/increment';
+  // incrementURL = 'http://localhost:9428/api/increment';
 
-  socketURL = 'http://localhost:9428/';
+  socketURL = 'https://sylvainlangler.alwaysdata.net/';
+  // socketURL = 'http://192.168.43.181:9428/';
+  // socketURL = 'http://localhost:9428/';
 
   increment: number;
   incrementObs: BehaviorSubject<number> = new BehaviorSubject(this.increment);
