@@ -32,6 +32,7 @@ import { AgencyFilterFormComponent } from './agencies/agency-filter-form/agency-
 import { AccommodationComponent } from './accommodations/accommodation/accommodation.component';
 import { AccommodationListComponent } from './accommodations/accommodation-list/accommodation-list.component';
 import { AccommodationFilterFormComponent } from './accommodations/accommodation-filter-form/accommodation-filter-form.component';
+import { WaiterComponent } from './waiter/waiter.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { AccommodationFilterFormComponent } from './accommodations/accommodation
     AccommodationComponent,
     AccommodationListComponent,
     AccommodationFilterFormComponent,
+    WaiterComponent,
   ],
   entryComponents: [
     InternshipModalContentComponent
