@@ -353,7 +353,7 @@ export const FLAG_MOCK: Flag[] = [
 
     {
 
-        Code: 'NS',
+        Code: 'DK',
         CountryName: 'Danemark'
     },
 

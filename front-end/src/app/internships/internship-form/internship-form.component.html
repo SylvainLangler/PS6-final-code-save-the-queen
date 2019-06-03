@@ -123,6 +123,14 @@
     Prenom <br>
     <input class="input-custom" type="text" id="studentSurname" [formControlName]="'studentSurname'">
   </label>
+  <label for="student">
+        Etudiant
+        <select class="form-control" id="student" [formControlName]="'student'">
+            <option *ngFor="let student of formerStudentList" [ngValue]="student">
+              {{student.firstName}} {{student.lastName}}
+            </option>
+        </select>   
+  </label>
             <br>
             <label for="tutorMail">
     Mail Tuteur *(Laboratoire) <br>

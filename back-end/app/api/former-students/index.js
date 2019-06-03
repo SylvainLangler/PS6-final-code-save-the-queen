@@ -30,6 +30,19 @@ router.get('/', (req, res) => {
   }
 });
 
+router.get('/allFormerStudents', (req, res) => {
+  try {
+    const formerStudents = FormerStudent.getAllFormerStudents();
+    res.status(200).json(formerStudents);
+  } catch (err) {
+    if (err.name === 'ValidationError') {
+      res.status(400).json(err.extra);
+    } else {
+      res.status(500).json(err);
+    }
+  }
+});
+
 router.get('/available_countries', (req, res) => {
   try {
     const countries = FormerStudent.getAvailableCountries();

@@ -66,6 +66,14 @@ export class FormerStudentService {
     }
   }
 
+  
+  getAllFormerStudents(){
+    let URL = this.formerStudentsURL + "/allFormerStudents";
+    return this.http.get<any>(URL).toPromise().then((res) => {return res || {};}).catch(this.handleError);
+  }
+
+  
+
   getStatistics(){
     let URL = this.formerStudentsURL + "/statistics";
     return this.http.get<any>(URL).toPromise().then((res) => {return res || {};}).catch(this.handleError);

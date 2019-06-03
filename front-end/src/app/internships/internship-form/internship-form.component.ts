@@ -4,6 +4,8 @@ import { InternshipService } from '../../../services/internship/internship.servi
 import { Internship } from '../../../models/internship';
 import { FLAG_MOCK } from '../../../mocks/flags.mock';
 import { Flag } from '../../../models/flag';
+import { FormerStudentService } from 'src/services/former-student/former-student.service';
+import { FormerStudent } from 'src/models/former-student';
 
 @Component({
   selector: 'app-internship-form',
@@ -13,8 +15,12 @@ import { Flag } from '../../../models/flag';
 export class InternshipFormComponent implements OnInit {
   listFlag: Flag[] = FLAG_MOCK;
   currentFlag: Flag = FLAG_MOCK[0];
+  public formerStudentList: FormerStudent[] = [];
+
+
   public internshipform: FormGroup;
-  constructor(public formBuilder: FormBuilder, public internshipService: InternshipService) {
+  constructor(public formBuilder: FormBuilder, public internshipService: InternshipService, public formerStudentService: FormerStudentService) {
+  
     this.internshipform = this.formBuilder.group({
       title: [''],
       company: [''],
@@ -29,11 +35,20 @@ export class InternshipFormComponent implements OnInit {
       ambience: [''],
       studentName: [''],
       studentSurname: [''],
+      student:[''],
       tutorMail: [''],
       websiteURL: ['']
     });
    }
+   
   ngOnInit() {
+    this.formerStudentService
+    .getAllFormerStudents()
+    .then(res => {
+      this.formerStudentList = res;
+    })
+    .catch(error => console.log(error));
+
   }
 
   addInternship() {
@@ -43,7 +58,7 @@ export class InternshipFormComponent implements OnInit {
     internshipToCreate.currency = '€';
     console.log(internshipToCreate);
     
-    this.internshipService.addInternship(internshipToCreate);
+    this.internshipService.addInternship(internshipToCreate, this.internshipform.controls['student'].value.id);
   }
 
   getSelectedCountry(country) {

@@ -127,6 +127,10 @@ class FormerStudentModel extends BaseModel {
     return reqResult;
   }
 
+  getAllFormerStudents(){
+    return this.items;
+  }
+
 
   getAvailableSections() {
     let tabSections = [];

@@ -73,8 +73,9 @@ export class InternshipService {
     return this.http.get<any>(URL).toPromise().then((res) => {return res || {};}).catch(this.handleError);
   }
 
-  addInternship(intern: Internship) {
-    this.http.post<Internship>(this.internshipsURL, intern).subscribe(s => {
+  addInternship(intern: Internship, studentId: number) {
+    let URL = this.internshipsURL + "?studentId=" + studentId;
+    this.http.post<Internship>(URL, intern).subscribe(s => {
       this.internshipList.push(s);
     this.internships$.next(this.internshipList); });
   }
