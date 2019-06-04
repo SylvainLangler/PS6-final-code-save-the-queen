@@ -6,14 +6,8 @@ const CommonMids = require('../../utils/common-mids.js');
 const router = new Router();
 
 router.get('/unvalidated_internships', CommonMids.catchError, (req, res) => {
-	/*if(Admin.isConnectedToken(req.query.mail, req.query.token)){
-		res.status(200).json(Admin.getUnvalidatedAdminStage(req.query));
-	} else {
-		res.status(200).json('not connected');
-	}*/
-	Admin.getUnvalidatedAdminStage(req.query);
+	res.status(200).json(Admin.getUnvalidatedAdminStage(req.query, Internship.get()));
 	return;
-
 });
 
 router.post('/connect', CommonMids.catchError, (req, res) => {
