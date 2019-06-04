@@ -3,3 +3,33 @@
   font-size: 239px;
   justify-content: center;
 }
+
+.info{
+  margin-top:2em;
+}
+
+.label{
+  font-weight: bold;
+}
+
+.student{
+  background-color:#003c6842;
+  margin-top:1em;
+  padding:20px;
+  border: 1px solid black;
+  border-radius:10px;
+  min-height:550px;
+}
+
+.internship{
+  background-color:#003c6842;
+  margin-top:1em;
+  padding:20px;
+  border: 1px solid black;
+  border-radius:10px;
+  min-height:550px;
+}
+
+.col-student{
+  margin-left:2.6em;
+}

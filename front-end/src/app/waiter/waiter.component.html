@@ -1,3 +1,80 @@
-
-
-<h1 class="waiter"> {{count}} </h1>
+<!--<h1 class="waiter"> {{count}} </h1>-->
+<div class="row">
+    <div class="col-lg-3 col-student">
+        <div class="student">
+            <img src="{{ unvalidatedInternshipList[0].student.photo }}">
+            <div class="info">
+                <span>{{ unvalidatedInternshipList[0].student.firstName }} {{ unvalidatedInternshipList[0].student.lastName }}</span>
+            </div>
+            <div class="info">
+                <span class="label">Pays d'expatriation: </span>
+                <span>{{ unvalidatedInternshipList[0].student.country }}</span>
+            </div>
+            <div class="info">
+                <span class="label">Section: </span>
+                <span> {{ unvalidatedInternshipList[0].student.section }} </span>
+            </div>
+            <div class="info">
+                <span class="label">Contact</span><a href="mailto:{{ unvalidatedInternshipList[0].student.contact }}"><p> {{ unvalidatedInternshipList[0].student.contact }}</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+        <div class="internship row">
+            <h3 class="title">{{ unvalidatedInternshipList[0].title }}</h3>
+            <div class="col-lg-5">
+                <div class="info">
+                        <p class="d-inline mr-3 label">Pays:</p>
+                        <img class="img-country" src="{{ unvalidatedInternshipList[0].countryFlag }}">
+                        <i *ngIf="unvalidatedInternshipList[0].salary != 0" class="fas fa-dollar-sign float-right"></i>
+                    </div>
+                    <div class="info">
+                        <span class="label">Entreprise:</span>
+                        <span> {{ unvalidatedInternshipList[0].company }}</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Durée:</span>
+                        <span> {{ unvalidatedInternshipList[0].durationNbWeek }} semaines</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Année:</span>
+                        <span> {{ unvalidatedInternshipList[0].schoolYear }} </span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Etudiant:</span>
+                        <span> {{ unvalidatedInternshipList[0].student.firstName }} {{ unvalidatedInternshipList[0].student.lastName }}</span>
+                    </div>
+                    <div class="info">
+                        <span class="label">Site web:</span><a href="{{ unvalidatedInternshipList[0].websiteURL }}"><p> {{ unvalidatedInternshipList[0].websiteURL }}</p></a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="info">
+                    <span class="label">Ville: </span>
+                    <span>{{ unvalidatedInternshipList[0].city }}</span>
+                </div>
+                <div class="info">
+                    <span class="label">Rémunération: </span>
+                    <span>{{ unvalidatedInternshipList[0].salary }} {{ unvalidatedInternshipList[0].currency }}</span><span *ngIf="unvalidatedInternshipList[0].salary != 0"> par mois</span>
+                </div>
+                <div class="info">
+                    <span class="label">Coût de la vie: </span>
+                    <i class="fas fa-dollar-sign green-dollar" *ngFor="let dollar of getGreenDollarArray(unvalidatedInternshipList[0].costOfLife)" title="{{ unvalidatedInternshipList[0].costOfLife }} / 5"></i>
+                    <i class="fas fa-dollar-sign grey-dollar" *ngFor="let greydollar of getGreyDollarArray(unvalidatedInternshipList[0].costOfLife)" title="{{ unvalidatedInternshipList[0].costOfLife }} / 5"></i>
+                </div>
+                <div class="info">
+                    <span class="label">Ambiance au sein de l'entreprise: </span>
+                    <span>{{ unvalidatedInternshipList[0].ambience }}</span>
+                </div>
+                <div class="info">
+                    <span class="label">Description: </span>
+                    <span>{{ unvalidatedInternshipList[0].description }}</span>
+                </div>
+                <div *ngIf="unvalidatedInternshipList[0].lab" class="modal-content-info">
+                    <span class="contact">Tuteur: </span><a href="mailto:{{ unvalidatedInternshipList[0].tutorMail }}"><span>{{ unvalidatedInternshipList[0].tutorMail }}</span></a>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
