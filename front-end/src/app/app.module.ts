@@ -33,6 +33,7 @@ import { AccommodationComponent } from './accommodations/accommodation/accommoda
 import { AccommodationListComponent } from './accommodations/accommodation-list/accommodation-list.component';
 import { AccommodationFilterFormComponent } from './accommodations/accommodation-filter-form/accommodation-filter-form.component';
 import { WaiterComponent } from './waiter/waiter.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { WaiterComponent } from './waiter/waiter.component';
     AccommodationListComponent,
     AccommodationFilterFormComponent,
     WaiterComponent,
+    LoginComponent,
   ],
   entryComponents: [
     InternshipModalContentComponent

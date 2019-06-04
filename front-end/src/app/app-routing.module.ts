@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
 import { FormerStudentListComponent } from './former-students/former-student-list/former-student-list.component';
 import { InternshipListComponent } from './internships/internship-list/internship-list.component';
@@ -9,6 +8,7 @@ import { AgencyListComponent } from './agencies/agency-list/agency-list.componen
 import { InternshipFormComponent } from './internships/internship-form/internship-form.component';
 import { CountryUniversitiesComponent } from './universities/country-universities/country-universities.component';
 import { WaiterComponent } from './waiter/waiter.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -20,6 +20,7 @@ const routes: Routes = [
   {path: 'universites', component: CountryUniversitiesComponent},
   {path: 'accueil', component: HomeCardsComponent},
   {path: 'waiter', component: WaiterComponent},
+  {path: 'login', component: LoginComponent},
   {path: '', redirectTo: '/accueil', pathMatch: 'full'}
 ];
 

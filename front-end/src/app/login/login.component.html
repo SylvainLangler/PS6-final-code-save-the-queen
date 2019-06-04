@@ -1,0 +1,18 @@
+
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Login Form -->
+    <form (ngSubmit)="onSubmit()">
+      <input type="text" id="login" class="fadeIn first" name="login" placeholder="Identifiant" required [(ngModel)]="login">
+      <input type="password" id="password" class="fadeIn second" name="login" placeholder="Mot de passe" required [(ngModel)]="password">
+      <input type="submit" class="fadeIn fourth" value="Se connecter">
+
+      <p *ngIf="failed" style="color: red"> L'identifiant et/ou le mot de passe sont incorrects. Veuillez réessayer</p>
+    </form>
+
+  </div>
+</div>
