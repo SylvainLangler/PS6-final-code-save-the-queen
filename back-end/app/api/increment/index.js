@@ -18,6 +18,7 @@ router.post('/', CommonMids.catchError, (req, res) => {
 
   Internship.setFirstValidity(id, true);
 
+  console.log(smap[id]);
   if (smap[id] !== undefined) {
     smap[id].emit('up', 'upped');
   }

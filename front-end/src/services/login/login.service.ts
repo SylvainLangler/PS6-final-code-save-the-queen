@@ -10,7 +10,7 @@ export class LoginService {
   token;
   id;
 
-  loginURL = 'https://sylvainlangler.alwaysdata.net/api/connection/connect';
+  loginURL = 'https://sylvainlangler.alwaysdata.net/api/admin/connect';
 
   authenticated = false;
   authenticatedObs: BehaviorSubject<boolean> = new BehaviorSubject(this.authenticated);

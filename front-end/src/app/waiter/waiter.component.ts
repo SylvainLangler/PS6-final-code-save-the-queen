@@ -13,28 +13,20 @@ import { Internship } from '../../models/internship';
 })
 export class WaiterComponent implements OnInit {
 
-  count: number;
-  public unvalidatedInternshipsList: Internship[] = [];
+  unvalidatedInternship: Internship;
   logged: boolean;
 
   constructor(public testService: TestServiceService, public cookieService: CookieService) {
     this.testService.listen();
     this.testService.incrementObs.subscribe((res) => {
-      this.count = res;
+      this.unvalidatedInternship = res;
     });
-    this.testService.getListOfUnvalidatedInternships();
+    this.testService.getIncrement();
 
     this.logged = cookieService.check('login');
   }
 
-  ngOnInit() {
-    this.testService
-    .getListOfUnvalidatedInternships()
-    .then(res => {
-      this.unvalidatedInternshipsList = res;
-    })
-    .catch(error => console.log(error));
-  }
+  ngOnInit() {}
 
   getGreenDollarArray(costOfLife: number){
     let tab = [];
