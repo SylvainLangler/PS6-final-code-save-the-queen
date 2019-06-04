@@ -17,6 +17,13 @@ export class LoginComponent implements OnInit {
   constructor(public loginService: LoginService) {
     this.loginService.authenticatedObs.subscribe((res) => {
       this.isAuthenticated = res;
+      if (this.isAuthenticated) {
+        // TODO on fait quoi ?
+        console.log('authentifié');
+        this.failed = false;
+      } else {
+        console.log('rip');
+      }
     });
   }
 
@@ -24,15 +31,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log('submitted :' +  this.login + ' ' + this.password);
-
     this.loginService.getAuthenticated(this.login, this.password);
-
-    if (this.isAuthenticated) {
-      // TODO on fait quoi ?
-      console.log('authentifié');
-    } else {
-      console.log('rip');
+    if(!this.isAuthenticated){
       this.failed = true;
     }
   }
