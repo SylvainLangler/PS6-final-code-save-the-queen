@@ -133,9 +133,4 @@ export class InternshipService {
     this.getInternships();
   }
 
-  getUnvalidatedInternshipsById(id: number){
-    let URL = this.internshipsURL + "?adminId=" + id;
-    return this.http.get<any>(URL).toPromise().then((res) => {return res || {};}).catch(this.handleError);
-  }
-
 }

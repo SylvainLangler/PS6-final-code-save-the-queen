@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TestServiceService } from 'src/services/test/test-service.service';
 import { CookieService } from 'ngx-cookie-service';
 import { InternshipService } from 'src/services/internship/internship.service';
-import { Internship } from '../../../models/internship';
+import { Internship } from '../../models/internship';
+
 
 @Component({
   selector: 'app-waiter',
@@ -13,21 +14,22 @@ import { Internship } from '../../../models/internship';
 export class WaiterComponent implements OnInit {
 
   count: number;
+  public unvalidatedInternshipsList: Internship[] = [];
   logged: boolean;
 
-  constructor(public testService: TestServiceService, public cookieService: CookieService, public internshipService: InternshipService,) {
+  constructor(public testService: TestServiceService, public cookieService: CookieService) {
     this.testService.listen();
     this.testService.incrementObs.subscribe((res) => {
       this.count = res;
     });
-    this.testService.getIncrement();
+    this.testService.getListOfUnvalidatedInternships();
 
     this.logged = cookieService.check('login');
   }
 
   ngOnInit() {
-    this.internshipService
-    .getUnvalidatedInternshipsById(id)
+    this.testService
+    .getListOfUnvalidatedInternships()
     .then(res => {
       this.unvalidatedInternshipsList = res;
     })
@@ -51,22 +53,5 @@ export class WaiterComponent implements OnInit {
 
   }
 
-}}
-  getGreenDollarArray(costOfLife: number){
-    let tab = [];
-    for(let i = 0; i<costOfLife; i++){
-      tab.push(i);
-    }
-    return tab;
-  }
-
-  getGreyDollarArray(costOfLife: number){
-    let tab = [];
-    for(let i = 0; i<5-costOfLife; i++){
-      tab.push(i);
-    }
-    return tab;
-
-  }
-
 }
+
