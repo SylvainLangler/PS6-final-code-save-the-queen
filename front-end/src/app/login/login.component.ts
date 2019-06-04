@@ -26,7 +26,9 @@ export class LoginComponent implements OnInit {
         console.log('authentifié');
         this.failed = false;
         cookieService.set('login', this.loginService.token);
+        cookieService.set('id', this.loginService.id);
         console.log('token= ',  cookieService.get('login'));
+        console.log('id= ',  cookieService.get('id'));
         this.router.navigate(['waiter']);
       } else if (!this.firstime) {
         this.failed = true;
