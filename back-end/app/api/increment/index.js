@@ -22,7 +22,7 @@ router.post('/', CommonMids.catchError, (req, res) => {
     smap[id].emit('up', 'upped');
   }
 
-    res.status(200).json('ok');
+    res.status(200).json('next internship');
 
 
   // if (id == 15651565112) {
