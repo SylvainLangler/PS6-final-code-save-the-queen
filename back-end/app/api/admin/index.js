@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const { BaseModel } = require('../../utils/base-model.js')
 const { Admin, Internship } = require('../../models');
 const CommonMids = require('../../utils/common-mids.js');
 

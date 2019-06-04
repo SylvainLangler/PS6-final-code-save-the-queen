@@ -65,6 +65,12 @@ class InternshipModel extends BaseModel {
     return false;
   }
 
+  setFirstValidity(id, validity) {
+    Admin.getFirstUnvalidatedAdminStage({adminId: id}, this.items).isValidated = validity;
+    this.save();
+    return ;
+  }
+
   // Set the string to lower case, remove useless spaces and replace accents/diacritics with
   // base character (For example : é becomes e)
   static normalizeString(str) {
