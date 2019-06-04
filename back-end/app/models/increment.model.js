@@ -1,5 +1,6 @@
 const Joi = require('joi');
 const BaseModel = require('../utils/base-model.js');
+const Internship = require('./internship.model.js');
 
 class IncrementModel extends BaseModel {
   constructor() {
@@ -16,6 +17,7 @@ class IncrementModel extends BaseModel {
   }
 
   getValue() {
+    Internship.test();
     return this.items[0].value;
   }
 }
