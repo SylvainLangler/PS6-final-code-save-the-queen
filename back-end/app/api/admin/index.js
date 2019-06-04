@@ -5,9 +5,16 @@ const CommonMids = require('../../utils/common-mids.js');
 
 const router = new Router();
 
-router.get('/unvalidated_internships', CommonMids.catchError, (req, res) => {
-	res.status(200).json(Admin.getUnvalidatedAdminStage(req.query, Internship.get()));
-	return;
+router.get('/first_unvalidated_internship', CommonMids.catchError, (req, res) => {
+	res.status(200).json(Admin.getFirstUnvalidatedAdminStage(req.query, Internship.get()));
+});
+
+router.post('/validate', CommonMids.catchError, (req, res) => {
+	if(Internship.setValidity(req.body, true)){
+		res.status(200).json('ok');
+	} else {
+		res.status(200).json('ko');
+	}
 });
 
 router.post('/connect', CommonMids.catchError, (req, res) => {

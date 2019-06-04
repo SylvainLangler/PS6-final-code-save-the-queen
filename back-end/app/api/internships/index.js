@@ -14,15 +14,6 @@ router.get('/', CommonMids.catchError, (req, res) => {
   res.status(200).json(internships);
 });
 
-router.post('/set_validity', CommonMids.catchError, (req, res) => {
-  const hasBeenValidated = Internship.setValidity(req.body);
-  if (hasBeenValidated) {
-    res.status(200).json('ok');
-  } else {
-    res.status(200).json('ko');
-  }
-});
-
 router.get('/statistics', CommonMids.catchError, (req, res) => {
   const stats = Internship.getStatistics();
   res.status(200).json(stats);

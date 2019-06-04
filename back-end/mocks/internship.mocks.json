@@ -20,7 +20,7 @@
     "studentName": "Dupont",
     "studentSurname": "Jeanne",
     "tutorMail": "tuteur@gmail.com",
-    "isValidated": false,
+    "isValidated": true,
     "student": {
       "firstName": "Jeanne",
       "lastName": "Dupont",

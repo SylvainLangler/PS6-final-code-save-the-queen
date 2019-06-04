@@ -43,16 +43,14 @@ class AdminModel extends BaseModel {
     return minAdmin;
   }
 
-  getUnvalidatedAdminStage(params = {}, internships){
+  getFirstUnvalidatedAdminStage(params = {}, internships){
     let adminUnvalidatedInternships = [];
-    console.log("length", internships.length);
     for(let i = 0; i < internships.length; i += 1){
-      console.log("referent", internships[i].referent);
       if(params.adminId == internships[i].referent.id && !internships[i].isValidated){
         adminUnvalidatedInternships.push(internships[i]);
       }
     }
-    return adminUnvalidatedInternships;
+    return adminUnvalidatedInternships[0];
   }
 }
 
