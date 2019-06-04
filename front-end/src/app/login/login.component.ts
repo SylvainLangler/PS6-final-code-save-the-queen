@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/services/login/login.service';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [CookieService]
 })
 export class LoginComponent implements OnInit {
 
@@ -14,9 +17,21 @@ export class LoginComponent implements OnInit {
   login: string;
   password: string;
 
-  constructor(public loginService: LoginService) {
+  firstime = true;
+
+  constructor(public loginService: LoginService, public cookieService: CookieService, public router: Router) {
     this.loginService.authenticatedObs.subscribe((res) => {
       this.isAuthenticated = res;
+      if (this.isAuthenticated && !this.firstime) {
+        console.log('authentifié');
+        this.failed = false;
+        cookieService.set('login', this.loginService.token);
+        console.log('token= ',  cookieService.get('login'));
+        this.router.navigate(['waiter']);
+      } else if (!this.firstime) {
+        this.failed = true;
+        console.log('rip');
+      }
     });
   }
 
@@ -24,16 +39,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    // console.log('submitted :' +  this.login + ' ' + this.password);
-
-    this.loginService.getAuthenticated(this.login, this.password);
-
-    if (this.isAuthenticated) {
-      // TODO on fait quoi ?
-      console.log('authentifié');
-    } else {
-      console.log('rip');
-      this.failed = true;
+    this.firstime = false;
+    if (!this.isAuthenticated) {
+      this.loginService.getAuthenticated(this.login, this.password);
     }
   }
 

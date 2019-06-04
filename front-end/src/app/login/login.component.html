@@ -12,6 +12,7 @@
       <input type="submit" class="fadeIn fourth" value="Se connecter">
 
       <p *ngIf="failed" style="color: red"> L'identifiant et/ou le mot de passe sont incorrects. Veuillez réessayer</p>
+      <p *ngIf="isAuthenticated" style="color: green">Waouw</p>
     </form>
 
   </div>
