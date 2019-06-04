@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { Increment } = require('../../models');
+const { Increment, Admin } = require('../../models');
 const CommonMids = require('../../utils/common-mids.js');
 
 const router = new Router();

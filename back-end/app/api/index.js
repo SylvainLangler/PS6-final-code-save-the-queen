@@ -4,7 +4,7 @@ const AccommodationRouter = require('./accommodations');
 const AgencyRouter = require('./agencies');
 const FormerStudentRouter = require('./former-students');
 const IncrementRouter = require('./increment');
-const ConnectionRouter = require('./connection');
+const AdminRouter = require('./admin');
 
 const router = new Router();
 router.get('/status', (req, res) => res.status(200).json('ok'));
@@ -13,6 +13,6 @@ router.use('/accommodations', AccommodationRouter);
 router.use('/agencies', AgencyRouter);
 router.use('/former-students', FormerStudentRouter);
 router.use('/increment', IncrementRouter);
-router.use('/connection', ConnectionRouter);
+router.use('/admin', AdminRouter);
 
 module.exports = router;

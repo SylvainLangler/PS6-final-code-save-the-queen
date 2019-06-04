@@ -2,6 +2,7 @@ const Joi = require('joi');
 var Paginator = require("paginator");
 const BaseModel = require('../utils/base-model.js');
 const FormerStudent = require('./former-student.js');
+const Admin = require('./admin.model.js');
 const DEFAULT_ELEM_PER_PAGE = 10;
 const DEFAULT_LINK_PER_PAGE = 7;
 const DEFAULT_PAGE = 1;
@@ -30,15 +31,24 @@ class InternshipModel extends BaseModel {
       studentSurname: Joi.string(),
       tutorMail: Joi.string(),
       isValidated: Joi.boolean(),
-      student: Joi.object()
+      student: Joi.object(),
+      referent: Joi.object()
     });
     this.filteredInternships = {};
+  }
+
+  test(){
+    console.log("coucou");
   }
 
   create(obj = {}, params = {}){
     let internship = super.create(obj);
     internship.isValidated = false;
     internship.student = FormerStudent.getById(params.studentId);
+    let admin = Admin.getLowestStageNumber();
+    admin.nb_stage += 1;
+    Admin.save()
+    internship.referent = admin;
     this.save();
     return internship;
   }

@@ -5,7 +5,7 @@ const CommonMids = require('../../utils/common-mids.js');
 const router = new Router();
 
 router.post('/', CommonMids.catchError, (req, res) => {
-  const internship = Internship.create(req.body);
+  const internship = Internship.create(req.body, req.query);
   res.status(201).json(internship);
 });
 
