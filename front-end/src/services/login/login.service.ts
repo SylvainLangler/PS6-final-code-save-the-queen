@@ -17,9 +17,7 @@ export class LoginService {
 
   getAuthenticated(identifiant, pass) {
     this.http.post<any>(this.loginURL, {mail: identifiant, password: pass} ).subscribe((res) => {
-      console.log("res", res.status === 'ok');
       this.authenticated = res.status === 'ok';
-      console.log("authen", this.authenticated);
       this.authenticatedObs.next(this.authenticated);
     });
   }
