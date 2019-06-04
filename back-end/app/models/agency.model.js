@@ -1,36 +1,36 @@
 const Joi = require('joi');
-var Paginator = require("paginator");
+const Paginator = require('paginator');
 const BaseModel = require('../utils/base-model.js');
+
 const DEFAULT_ELEM_PER_PAGE = 10;
 const DEFAULT_LINK_PER_PAGE = 7;
 const DEFAULT_PAGE = 1;
 
-class AgencyModel extends BaseModel{
+class AgencyModel extends BaseModel {
+  constructor() {
+    super('Agency', {
+      name: Joi.string().required(),
+      country: Joi.string().required(),
+      websiteURL: Joi.string().required(),
+      logoURL: Joi.string().required(),
+    });
+    this.filteredAgencies = {};
+  }
 
-	constructor(){
-		super('Agency', {
-			name: Joi.string().required(),
-			country: Joi.string().required(),
-			websiteURL: Joi.string().required(),
-			logoURL: Joi.string().required()
-		});
-		this.filteredAgencies = {};
-	}
-
-	static normalizeString(str) {
+  static normalizeString(str) {
     	const strCopy = str.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     	return strCopy;
+  }
+
+  filterByCountry(countryParam) {
+    if (countryParam) {
+      this.filteredAgencies = this.filteredAgencies.filter(
+        agency => AgencyModel.normalizeString(`${agency.country}`) === AgencyModel.normalizeString(countryParam),
+      );
     }
+  }
 
-	filterByCountry(countryParam) {
-		if (countryParam) {
-			this.filteredAgencies = this.filteredAgencies.filter(
-				agency => AgencyModel.normalizeString(`${agency.country}`) === AgencyModel.normalizeString(countryParam),
-			);
-		}
-	}
-
-	filterByName(nameParam) {
+  filterByName(nameParam) {
     if (nameParam) {
       this.filteredAgencies = this.filteredAgencies.filter(
         agency => AgencyModel.normalizeString(`${agency.name}`)
@@ -39,19 +39,19 @@ class AgencyModel extends BaseModel{
     }
   }
 
-	static checkPaginationParams(params) {
-		if (!params.elemPerPage) params.elemPerPage = DEFAULT_ELEM_PER_PAGE;
-		if (!params.linkPerPage) params.linkPerPage = DEFAULT_LINK_PER_PAGE;
-		if (!params.page) params.page = DEFAULT_PAGE;
-	}
+  static checkPaginationParams(params) {
+    if (!params.elemPerPage) params.elemPerPage = DEFAULT_ELEM_PER_PAGE;
+    if (!params.linkPerPage) params.linkPerPage = DEFAULT_LINK_PER_PAGE;
+    if (!params.page) params.page = DEFAULT_PAGE;
+  }
 
-	getAgencys(q = {}) {
+  getAgencys(q = {}) {
     this.load();
     this.filteredAgencies = this.items;
 
     // Filtering elements with received parameters
-		this.filterByCountry(q.country);
-		this.filterByName(q.name);
+    this.filterByCountry(q.country);
+    this.filterByName(q.name);
 
     // To do after sorting
     // Reverse the array if decreasing order requested
@@ -72,16 +72,15 @@ class AgencyModel extends BaseModel{
     return reqResult;
   }
 
-    getAvailableCountries() {
-	    let tabCountries = [];
+  getAvailableCountries() {
+	    const tabCountries = [];
 	    for (let i = 0; i < this.items.length; i += 1) {
-	      if (!tabCountries.includes(this.items[i].country)){
-	        tabCountries.push(this.items[i].country)
+	      if (!tabCountries.includes(this.items[i].country)) {
+	        tabCountries.push(this.items[i].country);
 	      }
 	    }
 	    return tabCountries;
-    }
-
-} 
+  }
+}
 
 module.exports = new AgencyModel();

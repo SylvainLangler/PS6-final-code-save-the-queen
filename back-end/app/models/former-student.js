@@ -1,12 +1,12 @@
 const Joi = require('joi');
-var Paginator = require("paginator");
+const Paginator = require('paginator');
 const BaseModel = require('../utils/base-model.js');
+
 const DEFAULT_ELEM_PER_PAGE = 10;
 const DEFAULT_LINK_PER_PAGE = 7;
 const DEFAULT_PAGE = 1;
 
 class FormerStudentModel extends BaseModel {
-
   constructor() {
     super('FormerStudent', {
       firstName: Joi.string().required(),
@@ -18,7 +18,7 @@ class FormerStudentModel extends BaseModel {
       internship: Joi.string().required(),
       section: Joi.string().required(),
       contact: Joi.string().required(),
-      photo: Joi.string().required()
+      photo: Joi.string().required(),
     });
     this.filteredFormerStudents = {};
   }
@@ -127,33 +127,30 @@ class FormerStudentModel extends BaseModel {
     return reqResult;
   }
 
-  getAllFormerStudents(){
+  getAllFormerStudents() {
     return this.items;
   }
 
 
   getAvailableSections() {
-    let tabSections = [];
+    const tabSections = [];
     for (let i = 0; i < this.items.length; i += 1) {
-      if (!tabSections.includes(this.items[i].section)){
-        tabSections.push(this.items[i].section)
+      if (!tabSections.includes(this.items[i].section)) {
+        tabSections.push(this.items[i].section);
       }
     }
     return tabSections;
   }
 
   getAvailableCountries() {
-    let tabCountries = [];
+    const tabCountries = [];
     for (let i = 0; i < this.items.length; i += 1) {
-      if (!tabCountries.includes(this.items[i].country)){
-        tabCountries.push(this.items[i].country)
+      if (!tabCountries.includes(this.items[i].country)) {
+        tabCountries.push(this.items[i].country);
       }
     }
     return tabCountries;
   }
-
 }
 
 module.exports = new FormerStudentModel();
-
-

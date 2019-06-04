@@ -14,7 +14,7 @@ router.post('/', CommonMids.catchError, (req, res) => {
   const increment = Increment.increment();
   const io = req.app.get('io');
 
-  let smap = req.app.get('smap');
+  const smap = req.app.get('smap');
 
   if (smap[id] !== undefined) {
     smap[id].emit('ouai', 'yeppa');
@@ -22,7 +22,7 @@ router.post('/', CommonMids.catchError, (req, res) => {
 
   if (id == 15651565112) {
     console.log('12 a posté');
-    
+
     res.status(200).json(69);
   } else if (id == 15877166342) {
     console.log('42 a posté');
@@ -30,14 +30,14 @@ router.post('/', CommonMids.catchError, (req, res) => {
   } else {
     res.status(403).json('Rip');
   }
-  
+
   //   io.emit('mash', 'mashalla');
   //   res.status(201).json(increment);
 });
 
 router.get('/:id', CommonMids.catchError, (req, res) => {
   const id = req.param('id');
-  
+
   if (id == 15651565112) {
     console.log('12 a get');
     res.status(200).json(69);
@@ -47,7 +47,6 @@ router.get('/:id', CommonMids.catchError, (req, res) => {
   } else {
     res.status(403).json('Rip');
   }
-
 });
 
 module.exports = router;

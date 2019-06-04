@@ -6,7 +6,6 @@ const api = require('./api');
 
 
 module.exports = (cb) => {
-  
   const app = express();
   const socketIo = require('socket.io');
 
@@ -20,21 +19,21 @@ module.exports = (cb) => {
 
   const io = socketIo(server);
 
-  let idAdmin = [15877166342, 15651565112];
+  const idAdmin = [15877166342, 15651565112];
   app.set('idAdmins', idAdmin);
 
-  let map_socket = {};
+  const map_socket = {};
   app.set('smap', map_socket);
 
   io.on('connection', (socket) => {
-      socket.emit('create', 'omedetto gozaimasu');
-      var id = socket.client.request._query.id;
-      console.log('id = ', id);
-      
-      let currMap = app.get('smap');
-      currMap[id] = socket;
-      app.set('smap', currMap);
-    });
-    
-    app.set('io', io);
+    socket.emit('create', 'omedetto gozaimasu');
+    const id = socket.client.request._query.id;
+    console.log('id = ', id);
+
+    const currMap = app.get('smap');
+    currMap[id] = socket;
+    app.set('smap', currMap);
+  });
+
+  app.set('io', io);
 };
