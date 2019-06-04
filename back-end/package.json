@@ -30,6 +30,7 @@
     "joi": "14.3.1",
     "morgan": "1.9.1",
     "paginator": "^1.0.0",
+    "sha1": "^1.1.1",
     "socketio": "^1.0.0"
   },
   "devDependencies": {
