@@ -54,15 +54,21 @@ class InternshipModel extends BaseModel {
     return internship;
   }
 
-  setValidity(body) {
+  setValidity(body, validity) {
     for (let i = 0; i < this.items.length; i += 1) {
       if (this.items[i].id == body.id) {
-        this.items[i].isValidated = body.validity;
+        this.items[i].isValidated = validity;
         super.update(this.items[i].id, this.items[i]);
         return true;
       }
     }
     return false;
+  }
+
+  setFirstValidity(id, validity) {
+    Admin.getFirstUnvalidatedAdminStage({adminId: id}, this.items).isValidated = validity;
+    this.save();
+    return ;
   }
 
   // Set the string to lower case, remove useless spaces and replace accents/diacritics with
