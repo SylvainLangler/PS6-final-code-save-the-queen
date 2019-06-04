@@ -51,4 +51,22 @@ export class WaiterComponent implements OnInit {
 
   }
 
+}}
+  getGreenDollarArray(costOfLife: number){
+    let tab = [];
+    for(let i = 0; i<costOfLife; i++){
+      tab.push(i);
+    }
+    return tab;
+  }
+
+  getGreyDollarArray(costOfLife: number){
+    let tab = [];
+    for(let i = 0; i<5-costOfLife; i++){
+      tab.push(i);
+    }
+    return tab;
+
+  }
+
 }
