@@ -1,8 +1,7 @@
 
 
-class CommonMids{
-
-	catchError(req, res, next) {
+class CommonMids {
+  catchError(req, res, next) {
     try {
       next();
     } catch (err) {

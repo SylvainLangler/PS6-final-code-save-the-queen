@@ -1,14 +1,14 @@
 const Joi = require('joi');
-var Paginator = require("paginator");
+const Paginator = require('paginator');
 const BaseModel = require('../utils/base-model.js');
 const FormerStudent = require('./former-student.js');
 const Admin = require('./admin.model.js');
+
 const DEFAULT_ELEM_PER_PAGE = 10;
 const DEFAULT_LINK_PER_PAGE = 7;
 const DEFAULT_PAGE = 1;
 
 class InternshipModel extends BaseModel {
-
   constructor() {
     super('Internship', {
       title: Joi.string().required(),
@@ -41,7 +41,8 @@ class InternshipModel extends BaseModel {
     console.log("coucou");
   }
 
-  create(obj = {}, params = {}){
+
+  create(obj = {}, params = {}) {
     let internship = super.create(obj);
     internship.isValidated = false;
     internship.student = FormerStudent.getById(params.studentId);
@@ -53,9 +54,9 @@ class InternshipModel extends BaseModel {
     return internship;
   }
 
-  setValidity(body){
-    for(let i = 0; i < this.items.length; i += 1){
-      if(this.items[i].id == body.id){
+  setValidity(body) {
+    for (let i = 0; i < this.items.length; i += 1) {
+      if (this.items[i].id == body.id) {
         this.items[i].isValidated = body.validity;
         super.update(this.items[i].id, this.items[i]);
         return true;
@@ -149,7 +150,7 @@ class InternshipModel extends BaseModel {
   }
 
   // Filter by internship validity
-  filterByValidity(listToFilter, validityParam){
+  filterByValidity(listToFilter, validityParam) {
     if (validityParam) {
       listToFilter = listToFilter.filter(
         internship => InternshipModel.normalizeString(`${internship.isValidated}`) === InternshipModel.normalizeString(validityParam),
@@ -238,99 +239,99 @@ class InternshipModel extends BaseModel {
   }
 
   getAvailableCountries() {
-    let tabCountries = [];
+    const tabCountries = [];
     for (let i = 0; i < this.items.length; i += 1) {
-      if (!tabCountries.includes(this.items[i].country)){
-        tabCountries.push(this.items[i].country)
+      if (!tabCountries.includes(this.items[i].country)) {
+        tabCountries.push(this.items[i].country);
       }
     }
     return tabCountries;
   }
 
   getAvailableSections() {
-    let tabSections = [];
+    const tabSections = [];
     for (let i = 0; i < this.items.length; i += 1) {
-      if (!tabSections.includes(this.items[i].section)){
-        tabSections.push(this.items[i].section)
+      if (!tabSections.includes(this.items[i].section)) {
+        tabSections.push(this.items[i].section);
       }
     }
     return tabSections;
   }
 
-  getMaxDuration(){
+  getMaxDuration() {
     let maxDuration = 0;
-    for(let i = 0; i < this.items.length; i += 1){
-      if(maxDuration < this.items[i].durationNbWeek){
+    for (let i = 0; i < this.items.length; i += 1) {
+      if (maxDuration < this.items[i].durationNbWeek) {
         maxDuration = this.items[i].durationNbWeek;
       }
     }
     return maxDuration;
   }
 
-  getInternshipsByCountry(country){
+  getInternshipsByCountry(country) {
     return this.items.filter(
-        internship => InternshipModel.normalizeString(`${internship.country}`) === InternshipModel.normalizeString(country),
-      );
+      internship => InternshipModel.normalizeString(`${internship.country}`) === InternshipModel.normalizeString(country),
+    );
   }
 
-  getInternshipsBySection(section){
+  getInternshipsBySection(section) {
     return this.items.filter(
-        internship => InternshipModel.normalizeString(`${internship.section}`) === InternshipModel.normalizeString(section),
-      );
+      internship => InternshipModel.normalizeString(`${internship.section}`) === InternshipModel.normalizeString(section),
+    );
   }
 
-  getStatistics(){
-    let stats = {};
+  getStatistics() {
+    const stats = {};
     // Calculate how many internships by countries are stored
     stats.internshipByCountry = this.getInternshipsByCountryStats();
 
     // Calculate sections percentage
     stats.sectionPercentage = this.getSectionPercentage();
 
-    // Calculate number of internships by duration 
+    // Calculate number of internships by duration
     stats.nbInternshipsPerDuration = this.getInternshipsPerDuration();
 
     return stats;
   }
 
-  getInternshipsByCountryStats(){
-    let internshipByCountry = []
-    let countries = this.getAvailableCountries();
-    for(let i = 0; i < countries.length; i += 1){
+  getInternshipsByCountryStats() {
+    const internshipByCountry = [];
+    const countries = this.getAvailableCountries();
+    for (let i = 0; i < countries.length; i += 1) {
       internshipByCountry.push({
-        country:countries[i],
-        nbInternships:this.getInternshipsByCountry(countries[i]).length
+        country: countries[i],
+        nbInternships: this.getInternshipsByCountry(countries[i]).length,
       });
     }
     return internshipByCountry;
   }
 
-  getSectionPercentage(){
-    let sectionPercentage = [];
-    let sections = this.getAvailableSections();
-    for(let i = 0; i < sections.length; i += 1){
-      let sectionPercent = Number(((this.getInternshipsBySection(sections[i]).length/this.items.length)*100).toFixed(2))
+  getSectionPercentage() {
+    const sectionPercentage = [];
+    const sections = this.getAvailableSections();
+    for (let i = 0; i < sections.length; i += 1) {
+      const sectionPercent = Number(((this.getInternshipsBySection(sections[i]).length / this.items.length) * 100).toFixed(2));
       sectionPercentage.push({
-        section:sections[i],
-        sectionPercent: sectionPercent
+        section: sections[i],
+        sectionPercent,
       });
     }
     return sectionPercentage;
   }
 
-  getInternshipsPerDuration(){
-    let nbInternshipsPerDuration = [];
-    for(let i = 0; i < this.items.length; i += 1){
-      let currDuration = nbInternshipsPerDuration[this.items[i].durationNbWeek];
-      if(!currDuration){
+  getInternshipsPerDuration() {
+    const nbInternshipsPerDuration = [];
+    for (let i = 0; i < this.items.length; i += 1) {
+      const currDuration = nbInternshipsPerDuration[this.items[i].durationNbWeek];
+      if (!currDuration) {
         nbInternshipsPerDuration[this.items[i].durationNbWeek] = 1;
       } else {
         nbInternshipsPerDuration[this.items[i].durationNbWeek] += 1;
       }
     }
 
-    for(let i = 0; i < nbInternshipsPerDuration.length; i += 1){
-      if(!nbInternshipsPerDuration[i]){
+    for (let i = 0; i < nbInternshipsPerDuration.length; i += 1) {
+      if (!nbInternshipsPerDuration[i]) {
         nbInternshipsPerDuration[i] = 0;
       }
     }

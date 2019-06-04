@@ -17,21 +17,21 @@ router.get('/unvalidated_internships', CommonMids.catchError, (req, res) => {
 });
 
 router.post('/connect', CommonMids.catchError, (req, res) => {
-    const connectedUser = Admin.connectWithPassword(req.body);
-    if(connectedUser){
-    	res.status(200).json({status:'ok', id: connectedUser.id, token: connectedUser.token});
-    } else {
-    	res.status(200).json({status:'ko', id: null, token: null});
-    }
+  const connectedUser = Admin.connectWithPassword(req.body);
+  if (connectedUser) {
+    	res.status(200).json({ status: 'ok', id: connectedUser.id, token: connectedUser.token });
+  } else {
+    	res.status(200).json({ status: 'ko', id: null, token: null});
+  }
 });
 
 router.post('/token_connect', CommonMids.catchError, (req, res) => {
-	let connectedUser = Admin.connectWithToken(req.body);
-	if(connectedUser){
-    	res.status(200).json({status:'ok', id: connectedUser.id, token: connectedUser.token});
-    } else {
-    	res.status(200).json({status:'ko', id: null, token: null});
-    }
+  const connectedUser = Admin.connectWithToken(req.body);
+  if (connectedUser) {
+    	res.status(200).json({ status: 'ok', id: connectedUser.id, token: connectedUser.token });
+  } else {
+    	res.status(200).json({ status: 'ko', id: null, token: null });
+  }
 });
 
 module.exports = router;

@@ -1,49 +1,49 @@
 const Joi = require('joi');
-var Paginator = require("paginator");
+const Paginator = require('paginator');
 const BaseModel = require('../utils/base-model.js');
+
 const DEFAULT_ELEM_PER_PAGE = 10;
 const DEFAULT_LINK_PER_PAGE = 7;
 const DEFAULT_PAGE = 1;
 
 class AccommodationModel extends BaseModel {
-
-	constructor(){
-		super('Accommodation', {
-			country: Joi.string().required(),
-			adress: Joi.string().required(),
-			price: Joi.number().required(),
-			surface: Joi.number().required(),
-			contact: Joi.string().required(),
-			devise: Joi.string().required(),
-			contact: Joi.string().required(),
+  constructor() {
+    super('Accommodation', {
+      country: Joi.string().required(),
+      adress: Joi.string().required(),
+      price: Joi.number().required(),
+      surface: Joi.number().required(),
+      contact: Joi.string().required(),
+      devise: Joi.string().required(),
+      contact: Joi.string().required(),
       websiteURL: Joi.string().required(),
-      etudiant: Joi.string().required()
-		});
-		this.filteredAccommodations = {};
-	}
+      etudiant: Joi.string().required(),
+    });
+    this.filteredAccommodations = {};
+  }
 
-	static normalizeString(str) {
-		const strCopy = str.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-		return strCopy;
-	}
+  static normalizeString(str) {
+    const strCopy = str.trim().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return strCopy;
+  }
 
-	static sortByPrice(a, b) {
-		if (a.price < b.price) return -1;
-		if (a.price > b.price) return 1;
-		return 0;
-	}
+  static sortByPrice(a, b) {
+    if (a.price < b.price) return -1;
+    if (a.price > b.price) return 1;
+    return 0;
+  }
 
-	static sortBySurface(a, b) {
-		if (a.surface < b.surface) return -1;
-		if (a.surface > b.surface) return 1;
-		return 0;
-	}
+  static sortBySurface(a, b) {
+    if (a.surface < b.surface) return -1;
+    if (a.surface > b.surface) return 1;
+    return 0;
+  }
 
-	filterByPrice(priceStartParam, priceEndParam) {
+  filterByPrice(priceStartParam, priceEndParam) {
     const parsedPriceStartParam = parseInt(priceStartParam, 10);
     const parsedPriceEndParam = parseInt(priceEndParam, 10);
-    console.log("price start", parsedPriceStartParam);
-    console.log("price end", parsedPriceEndParam);
+    console.log('price start', parsedPriceStartParam);
+    console.log('price end', parsedPriceEndParam);
     if (parsedPriceStartParam && parsedPriceEndParam) {
       this.filteredAccommodations = this.filteredAccommodations.filter(
         accommodation => parsedPriceStartParam <= `${accommodation.price}`
@@ -60,7 +60,7 @@ class AccommodationModel extends BaseModel {
     }
   }
 
-	filterBySurface(surfaceStartParam, surfaceEndParam) {
+  filterBySurface(surfaceStartParam, surfaceEndParam) {
     const parsedSurfaceStartParam = parseInt(surfaceStartParam, 10);
     const parsedSurfaceEndParam = parseInt(surfaceEndParam, 10);
     if (parsedSurfaceStartParam && parsedSurfaceEndParam) {
@@ -79,25 +79,25 @@ class AccommodationModel extends BaseModel {
     }
   }
 
-	filterByCountry(countryParam) {
-		if (countryParam) {
-			this.filteredAccommodations = this.filteredAccommodations.filter(
-				accommodation => AccommodationModel.normalizeString(`${accommodation.country}`) === AccommodationModel.normalizeString(countryParam),
-			);
-		}
-	}
+  filterByCountry(countryParam) {
+    if (countryParam) {
+      this.filteredAccommodations = this.filteredAccommodations.filter(
+        accommodation => AccommodationModel.normalizeString(`${accommodation.country}`) === AccommodationModel.normalizeString(countryParam),
+      );
+    }
+  }
 
 
-	static checkPaginationParams(params) {
-		if (!params.elemPerPage) params.elemPerPage = DEFAULT_ELEM_PER_PAGE;
-		if (!params.linkPerPage) params.linkPerPage = DEFAULT_LINK_PER_PAGE;
-		if (!params.page) params.page = DEFAULT_PAGE;
-	}
+  static checkPaginationParams(params) {
+    if (!params.elemPerPage) params.elemPerPage = DEFAULT_ELEM_PER_PAGE;
+    if (!params.linkPerPage) params.linkPerPage = DEFAULT_LINK_PER_PAGE;
+    if (!params.page) params.page = DEFAULT_PAGE;
+  }
 
-	getAccommodations(q = {}) {
+  getAccommodations(q = {}) {
     this.load();
     this.filteredAccommodations = this.items;
-    
+
     // Filtering elements with received parameters
     this.filterByPrice(q.priceStart, q.priceEnd);
     this.filterBySurface(q.surfaceStart, q.surfaceEnd);
@@ -128,11 +128,11 @@ class AccommodationModel extends BaseModel {
     return reqResult;
   }
 
-	getAvailableCountries() {
-    let tabCountries = [];
+  getAvailableCountries() {
+    const tabCountries = [];
     for (let i = 0; i < this.items.length; i += 1) {
-      if (!tabCountries.includes(this.items[i].country)){
-        tabCountries.push(this.items[i].country)
+      if (!tabCountries.includes(this.items[i].country)) {
+        tabCountries.push(this.items[i].country);
       }
     }
     return tabCountries;
@@ -140,8 +140,8 @@ class AccommodationModel extends BaseModel {
 
   getMaxPrice() {
     let maxPrice = 0;
-    for(let i = 0; i < this.items.length; i += 1){
-      if(maxPrice < this.items[i].price){
+    for (let i = 0; i < this.items.length; i += 1) {
+      if (maxPrice < this.items[i].price) {
         maxPrice = this.items[i].price;
       }
     }
@@ -150,14 +150,13 @@ class AccommodationModel extends BaseModel {
 
   getMaxSurface() {
     let maxSurface = 0;
-    for(let i = 0; i < this.items.length; i += 1){
-      if(maxSurface < this.items[i].surface){
+    for (let i = 0; i < this.items.length; i += 1) {
+      if (maxSurface < this.items[i].surface) {
         maxSurface = this.items[i].surface;
       }
     }
     return maxSurface;
   }
-
 }
 
 module.exports = new AccommodationModel();

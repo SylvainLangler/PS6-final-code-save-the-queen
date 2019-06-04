@@ -11,41 +11,26 @@ class AdminModel extends BaseModel {
       token: Joi.string(),
       nb_stage: Joi.number()
     });
-    this.load();
   }
 
   connectWithPassword(obj = {}) {
-    if(this.isConnectedPassword(obj.mail, obj.password)){
-      this.items[i].token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-      this.save();
-      return this.items[i];
+    for(let i = 0; i < this.items.length; i += 1){
+      if(obj.mail == this.items[i].mail && sha1(obj.password) == this.items[i].password){
+        this.items[i].token = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        this.save();
+        return this.items[i];
+      }
     }
     return null;
   }
 
   connectWithToken(obj = {}){
-    if(isConnectedToken(obj.mail, obj.token)){
-      return this.items[i];
+    for(let i = 0; i < this.items.length; i += 1){
+      if(obj.mail == this.items[i].mail && obj.token == this.items[i].token){
+        return this.items[i];
+      }
     }
     return null;
-  }
-
-  isConnectedPassword(mail, password){
-    for(let i = 0; i < this.items.length; i += 1){
-      if(mail == this.items[i].mail && sha1(password) == this.items[i].password){
-        return true;
-      }
-    }
-    return false;
-  }
-
-  isConnectedToken(mail, token){
-    for(let i = 0; i < this.items.length; i += 1){
-      if(mail == this.items[i].mail && token == this.items[i].token){
-        return true;
-      }
-    }
-    return false;
   }
 
   getLowestStageNumber(){
