@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/services/login/login.service';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [CookieService]
 })
 export class LoginComponent implements OnInit {
 
@@ -16,15 +19,15 @@ export class LoginComponent implements OnInit {
 
   firstime = true;
 
-  constructor(public loginService: LoginService) {
+  constructor(public loginService: LoginService, public cookieService: CookieService, public router: Router) {
     this.loginService.authenticatedObs.subscribe((res) => {
       this.isAuthenticated = res;
-      console.log('firstime', this.firstime);
-
       if (this.isAuthenticated && !this.firstime) {
-        // TODO on fait quoi ?
         console.log('authentifié');
         this.failed = false;
+        cookieService.set('login', this.loginService.token);
+        console.log('token= ',  cookieService.get('login'));
+        this.router.navigate(['waiter']);
       } else if (!this.firstime) {
         this.failed = true;
         console.log('rip');
@@ -37,7 +40,9 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.firstime = false;
-    this.loginService.getAuthenticated(this.login, this.password);
+    if (!this.isAuthenticated) {
+      this.loginService.getAuthenticated(this.login, this.password);
+    }
   }
 
 }

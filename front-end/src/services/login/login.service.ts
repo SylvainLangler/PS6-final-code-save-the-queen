@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LoginService {
 
-
+  token;
+  
   loginURL = 'https://sylvainlangler.alwaysdata.net/api/connection/connect';
 
   authenticated = false;
@@ -18,6 +19,7 @@ export class LoginService {
   getAuthenticated(identifiant, pass) {
     this.http.post<any>(this.loginURL, {mail: identifiant, password: pass} ).subscribe((res) => {
       this.authenticated = res.status === 'ok';
+      this.token = res.token;
       this.authenticatedObs.next(this.authenticated);
     });
   }
