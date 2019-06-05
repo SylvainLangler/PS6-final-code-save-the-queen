@@ -16,6 +16,12 @@ router.post('/validate', CommonMids.catchError, (req, res) => {
 	}
 });
 
+router.delete('/refuse', CommonMids.catchError, (req, res) => {
+	let id = Admin.getFirstUnvalidatedAdminStage(req.query, Internship.get()).id;
+	Internship.delete(id);
+	res.status(200).json('ok');
+});
+
 router.post('/connect', CommonMids.catchError, (req, res) => {
   const connectedUser = Admin.connectWithPassword(req.body);
   if (connectedUser) {

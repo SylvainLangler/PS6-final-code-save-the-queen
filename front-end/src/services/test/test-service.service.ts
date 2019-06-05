@@ -51,6 +51,8 @@ export class TestServiceService {
      console.log('mache !', data);
      this.getIncrement();
    });
+
+   window.setInterval(() => this.getIncrement(), 500);
  }
 
 }
