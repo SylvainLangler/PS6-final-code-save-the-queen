@@ -16,11 +16,12 @@ export class InternshipFormComponent implements OnInit {
   listFlag: Flag[] = FLAG_MOCK;
   currentFlag: Flag = FLAG_MOCK[0];
   public formerStudentList: FormerStudent[] = [];
+  tabInternshipDurations: number[] = [];
 
 
   public internshipform: FormGroup;
   constructor(public formBuilder: FormBuilder, public internshipService: InternshipService, public formerStudentService: FormerStudentService) {
-  
+    this.tabInternshipDurations = this.getInternshipDurationArray();
     this.internshipform = this.formBuilder.group({
       title: [''],
       company: [''],
@@ -33,8 +34,6 @@ export class InternshipFormComponent implements OnInit {
       costOfLife: [''],
       salary: [''],
       ambience: [''],
-      studentName: [''],
-      studentSurname: [''],
       student:[''],
       tutorMail: [''],
       websiteURL: ['']
@@ -65,6 +64,14 @@ export class InternshipFormComponent implements OnInit {
     // tslint:disable-next-line:radix
     this.currentFlag = FLAG_MOCK[parseInt(country.split(':')[0])];
     console.log(this.currentFlag);
+  }
+
+  getInternshipDurationArray(){
+    let tab = [];
+    for(let i = 1; i<25; i++){
+      tab[i] = i;
+    }
+    return tab;
   }
 
 }

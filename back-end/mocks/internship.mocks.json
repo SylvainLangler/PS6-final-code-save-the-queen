@@ -675,5 +675,87 @@
       "token": "srxwkltrz1uj6vp8gost",
       "nb_stage": 2
     }
+  },
+  {
+    "title": "Assistant développeur Angular",
+    "company": "JaponInfo",
+    "durationNbWeek": 12,
+    "schoolYear": "2016",
+    "section": "SI",
+    "description": "Description du stage ......................",
+    "city": "Tokyo",
+    "lab": true,
+    "costOfLife": 4,
+    "salary": 500,
+    "ambience": " Bonne",
+    "student": {
+      "firstName": "Jeanne",
+      "lastName": "Dupont",
+      "yearAbroad": 2015,
+      "firstYear": 2014,
+      "lastYear": 2015,
+      "country": "Italie",
+      "internship": "internship",
+      "section": "SI",
+      "contact": "jeanne.dupont@gmail.com",
+      "photo": "https://randomuser.me/api/portraits/women/49.jpg",
+      "id": 1559551485234
+    },
+    "tutorMail": "mail@gmail.com",
+    "websiteURL": "http://japoninfo.com",
+    "country": "Japon",
+    "countryFlag": "https://www.countryflags.io/JP/flat/64.png",
+    "currency": "€",
+    "studentName": "Jeanne",
+    "studentSurname": "Dupont",
+    "id": 1559720451204,
+    "isValidated": false,
+    "referent": {
+      "id": 15651565112,
+      "mail": "ruben.houri@gmail.com",
+      "password": "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d",
+      "token": "6fucfu0i5r2adllum1rmkc",
+      "nb_stage": 2
+    }
+  },
+  {
+    "title": "Assistant Manager",
+    "company": "SuisseInfo",
+    "durationNbWeek": 15,
+    "schoolYear": "2015",
+    "section": "MAM",
+    "description": "Description....",
+    "city": "Zurich",
+    "lab": false,
+    "costOfLife": 4,
+    "salary": 560,
+    "ambience": "Bonne",
+    "student": {
+      "firstName": "Didier",
+      "lastName": "Rabon",
+      "yearAbroad": 2014,
+      "firstYear": 2013,
+      "lastYear": 2014,
+      "country": "Canada",
+      "internship": "internship",
+      "section": "SI",
+      "contact": "didier.rabon@gmail.com",
+      "photo": "https://randomuser.me/api/portraits/men/48.jpg",
+      "id": 1559581445234
+    },
+    "tutorMail": "mail@gmail.com",
+    "websiteURL": "http://www.suisseinfo.com",
+    "country": "Suisse",
+    "countryFlag": "https://www.countryflags.io/CH/flat/64.png",
+    "currency": "€",
+    "id": 1559721591521,
+    "isValidated": false,
+    "referent": {
+      "id": 15651565112,
+      "mail": "ruben.houri@gmail.com",
+      "password": "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d",
+      "token": "6fucfu0i5r2adllum1rmkc",
+      "nb_stage": 3
+    }
   }
 ]

@@ -23,31 +23,30 @@
         </div>
     </div>
     <div class="col-lg-8">
-        <div class="internship row">
-            <h3 class="title">{{ unvalidatedInternship.title }}</h3>
+        <div class="row internship">
             <div class="col-lg-5">
                 <div class="info">
-                        <p class="d-inline mr-3 label">Pays:</p>
-                        <img class="img-country" src="{{ unvalidatedInternship.countryFlag }}">
-                    </div>
-                    <div class="info">
-                        <span class="label">Entreprise:</span>
-                        <span> {{ unvalidatedInternship.company }}</span>
-                    </div>
-                    <div class="info">
-                        <span class="label">Durée:</span>
-                        <span> {{ unvalidatedInternship.durationNbWeek }} semaines</span>
-                    </div>
-                    <div class="info">
-                        <span class="label">Année:</span>
-                        <span> {{ unvalidatedInternship.schoolYear }} </span>
-                    </div>
-                    <div class="info">
-                        <span class="label">Etudiant:</span>
-                        <span> {{ unvalidatedInternship.student.firstName }} {{ unvalidatedInternship.student.lastName }}</span>
-                    </div>
-                    <div class="info">
-                        <span class="label">Site web:</span><a href="{{ unvalidatedInternship.websiteURL }}"><p> {{ unvalidatedInternship.websiteURL }}</p></a>
+                    <span class="mr-3 label">Titre:</span>
+                    <span>{{ unvalidatedInternship.title }}</span>
+                </div>
+                <div class="info">
+                    <p class="d-inline mr-3 label">Pays:</p>
+                    <img class="img-country" src="{{ unvalidatedInternship.countryFlag }}">
+                </div>
+                <div class="info">
+                    <span class="label">Entreprise:</span>
+                    <span> {{ unvalidatedInternship.company }}</span>
+                </div>
+                <div class="info">
+                    <span class="label">Durée:</span>
+                    <span> {{ unvalidatedInternship.durationNbWeek }} semaines</span>
+                </div>
+                <div class="info">
+                    <span class="label">Année:</span>
+                    <span> {{ unvalidatedInternship.schoolYear }} </span>
+                </div>
+                <div class="info">
+                    <span class="label">Site web:</span><a href="{{ unvalidatedInternship.websiteURL }}"><p> {{ unvalidatedInternship.websiteURL }}</p></a>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -76,8 +75,6 @@
                     <span class="contact">Tuteur: </span><a href="mailto:{{ unvalidatedInternship.tutorMail }}"><span>{{ unvalidatedInternship.tutorMail }}</span></a>
                 </div>
             </div>
-           
-        </div>
     </div>
 </div>
 
