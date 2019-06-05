@@ -22,6 +22,11 @@ router.delete('/refuse/:adminId', CommonMids.catchError, (req, res) => {
 	res.status(200).json('ok');
 });
 
+router.post('/delay/:adminId', CommonMids.catchError, (req, res) => {
+  Internship.moveToLast(Admin.getFirstUnvalidatedAdminStage(req.param('adminId'), Internship.get()));
+  res.status(200).json('ok');
+})
+
 router.post('/connect', CommonMids.catchError, (req, res) => {
   const connectedUser = Admin.connectWithPassword(req.body);
   if (connectedUser) {

@@ -58,6 +58,9 @@ class InternshipModel extends BaseModel {
     for (let i = 0; i < this.items.length; i += 1) {
       if (this.items[i].id == body.id) {
         this.items[i].isValidated = validity;
+        let admin = Admin.getById(this.items[i].referent.id);
+        admin.nb_stage -= 1;
+        Admin.save();
         super.update(this.items[i].id, this.items[i]);
         return true;
       }
@@ -69,6 +72,15 @@ class InternshipModel extends BaseModel {
     Admin.getFirstUnvalidatedAdminStage(id, this.items).isValidated = validity;
     this.save();
     return ;
+  }
+
+  moveToLast(internship){
+    for(let i = 0; i < this.items.length; i += 1){
+      if(this.items[i] == internship){
+        this.items.push(this.items.splice(i, 1)[0]);
+        this.save();
+      }
+    }
   }
 
   // Set the string to lower case, remove useless spaces and replace accents/diacritics with
