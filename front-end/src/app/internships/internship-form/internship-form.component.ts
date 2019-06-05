@@ -33,8 +33,8 @@ export class InternshipFormComponent implements OnInit {
       costOfLife: [''],
       salary: [''],
       ambience: [''],
-      studentName: [''],
-      studentSurname: [''],
+      //studentName: [''],
+      //studentSurname: [''],
       student:[''],
       tutorMail: [''],
       websiteURL: ['']
@@ -56,6 +56,8 @@ export class InternshipFormComponent implements OnInit {
     internshipToCreate.country = this.currentFlag.CountryName;
     internshipToCreate.countryFlag = 'https://www.countryflags.io/' + this.currentFlag.Code + '/flat/64.png';
     internshipToCreate.currency = '€';
+    internshipToCreate.studentName = internshipToCreate.student.firstName;
+    internshipToCreate.studentSurname = internshipToCreate.student.lastName;
     console.log(internshipToCreate);
     
     this.internshipService.addInternship(internshipToCreate, this.internshipform.controls['student'].value.id);
