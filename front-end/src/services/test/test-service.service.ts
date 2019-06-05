@@ -26,7 +26,6 @@ export class TestServiceService {
 
  getIncrement() {
    this.http.get<Internship>(this.incrementURL + '/' + this.cookieService.get('id')).subscribe((res) => {
-      console.log("bla");
      this.incrementObs.next(res);
    });
  }
@@ -51,8 +50,6 @@ export class TestServiceService {
      console.log('mache !', data);
      this.getIncrement();
    });
-
-   window.setInterval(() => this.getIncrement(), 500);
  }
 
 }

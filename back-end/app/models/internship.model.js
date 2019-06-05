@@ -66,7 +66,7 @@ class InternshipModel extends BaseModel {
   }
 
   setFirstValidity(id, validity) {
-    Admin.getFirstUnvalidatedAdminStage({adminId: id}, this.items).isValidated = validity;
+    Admin.getFirstUnvalidatedAdminStage(id, this.items).isValidated = validity;
     this.save();
     return ;
   }
