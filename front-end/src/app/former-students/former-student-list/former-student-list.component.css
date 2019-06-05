@@ -9,9 +9,13 @@
 }
 
 .no-filters {
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 .logo {
     width: 900px;
+}
+
+.img-no-filter{
+    height:500px;
 }

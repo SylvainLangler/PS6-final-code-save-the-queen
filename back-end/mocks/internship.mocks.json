@@ -449,6 +449,19 @@
     "studentSurname": "Jeanne",
     "tutorMail": "tuteur@gmail.com",
     "isValidated": false,
+    "student": {
+      "firstName": "Alexis",
+      "lastName": "Lato",
+      "yearAbroad": 2014,
+      "firstYear": 2013,
+      "lastYear": 2014,
+      "country": "France",
+      "internship": "internship",
+      "section": "GE",
+      "contact": "alexis.lato@gmail.com",
+      "photo": "https://randomuser.me/api/portraits/men/49.jpg",
+      "id": 1559553445234
+    },
     "referent": {
       "id": 15877166342,
       "mail": "sylvain.langler@gmail.com",
@@ -479,6 +492,19 @@
     "studentSurname": "Jeanne",
     "tutorMail": "tuteur@gmail.com",
     "isValidated": false,
+    "student": {
+      "firstName": "Alexis",
+      "lastName": "Lato",
+      "yearAbroad": 2014,
+      "firstYear": 2013,
+      "lastYear": 2014,
+      "country": "France",
+      "internship": "internship",
+      "section": "GE",
+      "contact": "alexis.lato@gmail.com",
+      "photo": "https://randomuser.me/api/portraits/men/49.jpg",
+      "id": 1559553445234
+    },
     "referent": {
       "id": 15877166342,
       "mail": "sylvain.langler@gmail.com",
@@ -509,6 +535,19 @@
     "studentSurname": "Jeanne",
     "tutorMail": "tuteur@gmail.com",
     "isValidated": false,
+    "student": {
+      "firstName": "Alexis",
+      "lastName": "Lato",
+      "yearAbroad": 2014,
+      "firstYear": 2013,
+      "lastYear": 2014,
+      "country": "France",
+      "internship": "internship",
+      "section": "GE",
+      "contact": "alexis.lato@gmail.com",
+      "photo": "https://randomuser.me/api/portraits/men/49.jpg",
+      "id": 1559553445234
+    },
     "referent": {
       "id": 15877166342,
       "mail": "sylvain.langler@gmail.com",
@@ -539,6 +578,19 @@
     "studentSurname": "Jeanne",
     "tutorMail": "tuteur@gmail.com",
     "isValidated": false,
+    "student": {
+      "firstName": "Alexis",
+      "lastName": "Lato",
+      "yearAbroad": 2014,
+      "firstYear": 2013,
+      "lastYear": 2014,
+      "country": "France",
+      "internship": "internship",
+      "section": "GE",
+      "contact": "alexis.lato@gmail.com",
+      "photo": "https://randomuser.me/api/portraits/men/49.jpg",
+      "id": 1559553445234
+    },
     "referent": {
       "id": 15877166342,
       "mail": "sylvain.langler@gmail.com",
