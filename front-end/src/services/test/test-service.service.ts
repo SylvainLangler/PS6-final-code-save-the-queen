@@ -11,13 +11,13 @@ import { Internship } from '../../models/internship'
 })
 export class TestServiceService {
 
-  incrementURL = 'https://sylvainlangler.alwaysdata.net/api/increment';
+  // incrementURL = 'https://sylvainlangler.alwaysdata.net/api/increment';
  // incrementURL = 'http://192.168.43.181:9428/api/increment';
- //incrementURL = 'http://localhost:9428/api/increment';
+ incrementURL = 'http://localhost:9428/api/increment';
 
-  socketURL = 'https://sylvainlangler.alwaysdata.net/';
+  // socketURL = 'https://sylvainlangler.alwaysdata.net/';
  // socketURL = 'http://192.168.43.181:9428/';
- //socketURL = 'http://localhost:9428/';
+ socketURL = 'http://localhost:9428/';
 
  increment: Internship;
  incrementObs: BehaviorSubject<Internship> = new BehaviorSubject(this.increment);
