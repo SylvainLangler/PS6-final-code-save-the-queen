@@ -1,3 +1,5 @@
+import { FormerStudent } from './former-student';
+
 export interface Internship {
    id?: number;
    title?: string;
@@ -14,8 +16,7 @@ export interface Internship {
    websiteURL?: string;
    detailURL?: string;
    section?: string;
-   studentName?: string;
-   studentSurname?: string;
+   student?: FormerStudent;
    city?: string;
    currency?: string;
    costOfLife?: number;
