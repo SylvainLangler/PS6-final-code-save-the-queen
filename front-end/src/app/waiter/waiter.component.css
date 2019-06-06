@@ -19,6 +19,7 @@
   border: 1px solid black;
   border-radius:10px;
   min-height:530px;
+  text-align:center;
 }
 
 .internship{
@@ -31,4 +32,18 @@
 
 .col-student{
   margin-left:2.6em;
+}
+
+.green-dollar{
+	color:green;
+	margin:1px;
+}
+
+.grey-dollar{
+	color:lightgrey;
+	margin:1px;
+}
+
+.photo{
+  margin:auto;
 }
