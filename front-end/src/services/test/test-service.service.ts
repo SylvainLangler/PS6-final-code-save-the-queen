@@ -24,7 +24,7 @@ export class TestServiceService {
   incrementObs: BehaviorSubject<Internship> = new BehaviorSubject(this.increment);
 
   socket;
-  port = ':1881';
+  port = ':1880';
 
   constructor(private http: HttpClient, public cookieService: CookieService, public loginService: LoginService) {
     this.socket = this.loginService.socket;
@@ -40,7 +40,7 @@ export class TestServiceService {
   listen() {
 
     this.socket.on('up', (data) => {
-      console.log('data:', data);
+      console.log('up data:', data);
       this.getIncrement();
     });
 
