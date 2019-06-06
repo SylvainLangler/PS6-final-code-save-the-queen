@@ -24,7 +24,7 @@ export class TestServiceService {
   incrementObs: BehaviorSubject<Internship> = new BehaviorSubject(this.increment);
 
   socket;
-  port = ':1880';
+  port = ':1881';
 
   constructor(private http: HttpClient, public cookieService: CookieService, public loginService: LoginService) {
     this.socket = this.loginService.socket;

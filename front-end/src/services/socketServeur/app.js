@@ -8,8 +8,8 @@ app.disable("x-powered-by");
 app.use(cors());
 app.use(bodyParser.json({}));
 
-let server = app.listen(1880, "192.168.43.58", () => {
-  console.log("started on port 1880");
+let server = app.listen(1881, "192.168.43.58", () => {
+  console.log("started on port 1881");
 });
 
 let socketIo = require("socket.io");

@@ -26,7 +26,7 @@ export class LoginService {
   socket;
   orchIp;
 
-  port = ':1880';
+  port = ':1881';
 
   initObs: BehaviorSubject<boolean> = new BehaviorSubject(this.isInit);
 
