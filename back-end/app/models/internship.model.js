@@ -71,7 +71,6 @@ class InternshipModel extends BaseModel {
     console.log("id : ", id);
     Admin.getFirstUnvalidatedAdminStage(id, this.items).isValidated = validity;
     this.save();
-    console.log(Admin.getFirstUnvalidatedAdminStage(id, this.items));
     return;
   }
 
