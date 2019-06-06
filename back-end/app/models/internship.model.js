@@ -41,13 +41,14 @@ class InternshipModel extends BaseModel {
     console.log("coucou");
   }
 
-  create(obj = {}, params = {}) {
+  create(obj = {}, studentId) {
     const internship = super.create(obj);
     internship.isValidated = false;
-    internship.student = FormerStudent.getById(params.studentId);
+    internship.student = FormerStudent.getById(studentId);
     const admin = Admin.getLowestStageNumber();
     admin.nb_stage += 1;
     Admin.save();
+    console.log("admin", admin);
     internship.referent = admin;
     this.save();
     return internship;
