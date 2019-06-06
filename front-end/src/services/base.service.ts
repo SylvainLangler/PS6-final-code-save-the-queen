@@ -9,7 +9,7 @@ import { Accommodation } from 'src/models/accommodation';
   providedIn: 'root'
 })
 export class BaseService {
-  public baseURL = 'http://' + window.location.hostname +':9428/api/';
+  public baseURL = 'http://' + '192.168.43.174' +':1880/';
 }
 
 export interface ResponseJSON {
