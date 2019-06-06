@@ -1,0 +1,1603 @@
+[
+    {
+        "id": "8e1f2faf.730e5",
+        "type": "tab",
+        "label": "Flow Socket",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "49b3d767.b1c378",
+        "type": "tab",
+        "label": "Flow Admin",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fc00c09a.0398b",
+        "type": "tab",
+        "label": "Flow Internship",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "358ef6ec.b0595a",
+        "type": "tab",
+        "label": "Flow Increment",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b54b351c.190ee8",
+        "type": "tab",
+        "label": "Flow FormerStudent",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "39d9aae5.0e3326",
+        "type": "tab",
+        "label": "Flow Agencies",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d9641ef5.e8b3e",
+        "type": "tab",
+        "label": "Flow Accommodations",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a2267826.facce8",
+        "type": "websocket-client",
+        "z": "",
+        "path": "wss://echo.websocket.org",
+        "tls": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "abc547af.b2d6a8",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "wss://192.168.43.180",
+        "wholemsg": "false"
+    },
+    {
+        "id": "e31f4026.15df9",
+        "type": "websocket-client",
+        "z": "",
+        "path": "wss://192.168.43.226:7777",
+        "tls": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "9fde2eb6.b4f65",
+        "type": "websocket-client",
+        "z": "",
+        "path": "wss://192.168.43.58:1881",
+        "tls": "",
+        "wholemsg": "false"
+    },
+    {
+        "id": "6de4418d.ef01a",
+        "type": "http in",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "url": "/admin/connect",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "50c4550d.fb53ac"
+            ]
+        ]
+    },
+    {
+        "id": "bb86739e.a460f",
+        "type": "http response",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 760,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "50c4550d.fb53ac",
+        "type": "http request",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/admin/connect",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 490,
+        "y": 100,
+        "wires": [
+            [
+                "bb86739e.a460f"
+            ]
+        ]
+    },
+    {
+        "id": "a844e2e6.bb35b",
+        "type": "http in",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "url": "/admin/token_connect",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "eb172a2a.2b3318"
+            ]
+        ]
+    },
+    {
+        "id": "565892f2.7c39dc",
+        "type": "http response",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 760,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "eb172a2a.2b3318",
+        "type": "http request",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/admin/token_connect",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "565892f2.7c39dc"
+            ]
+        ]
+    },
+    {
+        "id": "474f73c2.97d63c",
+        "type": "http in",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "url": "/admin/validate",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "1504b16f.bdd08f"
+            ]
+        ]
+    },
+    {
+        "id": "e522f901.338608",
+        "type": "http response",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 760,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1504b16f.bdd08f",
+        "type": "http request",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/admin/validate",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 490,
+        "y": 220,
+        "wires": [
+            [
+                "e522f901.338608"
+            ]
+        ]
+    },
+    {
+        "id": "b10ad0b2.3b47e",
+        "type": "http in",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "url": "/admin/refuse",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "e60b82f8.52802"
+            ]
+        ]
+    },
+    {
+        "id": "2b1d5a9e.d8fb76",
+        "type": "http response",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 760,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e60b82f8.52802",
+        "type": "http request",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/admin/refuse",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "2b1d5a9e.d8fb76"
+            ]
+        ]
+    },
+    {
+        "id": "909bde8.648912",
+        "type": "http in",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "url": "/admin/delay",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "af54a012.e52c9"
+            ]
+        ]
+    },
+    {
+        "id": "af170e4e.50805",
+        "type": "http response",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 760,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "af54a012.e52c9",
+        "type": "http request",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/admin/delay",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "af170e4e.50805"
+            ]
+        ]
+    },
+    {
+        "id": "99d62709.399958",
+        "type": "websocket out",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "server": "",
+        "client": "a2267826.facce8",
+        "x": 670,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f2083fcb.90711",
+        "type": "inject",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "topic": "",
+        "payload": "{\"ip\":null}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "71f18216.67dc8c"
+            ]
+        ]
+    },
+    {
+        "id": "b31e25b1.ccf318",
+        "type": "websocket in",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "server": "",
+        "client": "a2267826.facce8",
+        "x": 200,
+        "y": 360,
+        "wires": [
+            [
+                "c8037d12.628c1"
+            ]
+        ]
+    },
+    {
+        "id": "c8037d12.628c1",
+        "type": "debug",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 470,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "71f18216.67dc8c",
+        "type": "function",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "func": "var os = global.get( 'os' );\nvar networkInterfaces = os.networkInterfaces( );\n\nmsg.payload.ip = networkInterfaces[\"Wi-Fi\"][1].address;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "99d62709.399958",
+                "abb1a83a.52fb08"
+            ]
+        ]
+    },
+    {
+        "id": "abb1a83a.52fb08",
+        "type": "websocket out",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "server": "",
+        "client": "e31f4026.15df9",
+        "x": 670,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2c28b35f.798ccc",
+        "type": "http in",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "url": "/admin/first_unvalidated_internship",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "845ee52c.da93e8"
+            ]
+        ]
+    },
+    {
+        "id": "98cc7123.5a558",
+        "type": "http response",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 920,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "845ee52c.da93e8",
+        "type": "http request",
+        "z": "49b3d767.b1c378",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": true,
+        "url": "localhost:9428/api/admin/first_unvalidated_internship",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 590,
+        "y": 400,
+        "wires": [
+            [
+                "98cc7123.5a558"
+            ]
+        ]
+    },
+    {
+        "id": "93b794ed.d5ec28",
+        "type": "http in",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "url": "/internships",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "57ceb6ac.c57a38"
+            ]
+        ]
+    },
+    {
+        "id": "927786fe.df69b8",
+        "type": "http response",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "57ceb6ac.c57a38",
+        "type": "http request",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": true,
+        "url": "localhost:9428/api/internships",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 80,
+        "wires": [
+            [
+                "927786fe.df69b8"
+            ]
+        ]
+    },
+    {
+        "id": "40b921c1.bc6ee",
+        "type": "http in",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "url": "/internships",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "bd3e6352.4b81a"
+            ]
+        ]
+    },
+    {
+        "id": "d1421bee.cf82d8",
+        "type": "http response",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9578be09.72211",
+        "type": "http request",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/internships",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 610,
+        "y": 160,
+        "wires": [
+            [
+                "d1421bee.cf82d8"
+            ]
+        ]
+    },
+    {
+        "id": "4524011d.3fb2",
+        "type": "http in",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "url": "/internships/statistics",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "59097e1c.6a347"
+            ]
+        ]
+    },
+    {
+        "id": "11cccb8b.385da4",
+        "type": "http response",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "59097e1c.6a347",
+        "type": "http request",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/internships/statistics",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "11cccb8b.385da4"
+            ]
+        ]
+    },
+    {
+        "id": "7a930f21.4e753",
+        "type": "http in",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "url": "/internships/max_duration",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "e5fa3f6.abe6ac"
+            ]
+        ]
+    },
+    {
+        "id": "8e11f59a.a54d68",
+        "type": "http response",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e5fa3f6.abe6ac",
+        "type": "http request",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/internships/max_duration",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 300,
+        "wires": [
+            [
+                "8e11f59a.a54d68"
+            ]
+        ]
+    },
+    {
+        "id": "43c29b6b.f48684",
+        "type": "http in",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "url": "/internships/available_countries",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 360,
+        "wires": [
+            [
+                "b8a25640.ec2998"
+            ]
+        ]
+    },
+    {
+        "id": "db32e498.f6b278",
+        "type": "http response",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b8a25640.ec2998",
+        "type": "http request",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/internships/available_countries",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 360,
+        "wires": [
+            [
+                "db32e498.f6b278"
+            ]
+        ]
+    },
+    {
+        "id": "a1a92923.1b46e8",
+        "type": "http in",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "url": "/internships/available_sections",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 420,
+        "wires": [
+            [
+                "28e061ae.9a824e"
+            ]
+        ]
+    },
+    {
+        "id": "5fa886c5.852328",
+        "type": "http response",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "28e061ae.9a824e",
+        "type": "http request",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/internships/available_sections",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "5fa886c5.852328"
+            ]
+        ]
+    },
+    {
+        "id": "3f32aef2.d436a2",
+        "type": "http in",
+        "z": "358ef6ec.b0595a",
+        "name": "",
+        "url": "/increment",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "694c9dd.259e064"
+            ]
+        ]
+    },
+    {
+        "id": "7b52eaed.de3274",
+        "type": "http response",
+        "z": "358ef6ec.b0595a",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 800,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "694c9dd.259e064",
+        "type": "http request",
+        "z": "358ef6ec.b0595a",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": true,
+        "url": "localhost:9428/api/increment",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 530,
+        "y": 80,
+        "wires": [
+            [
+                "7b52eaed.de3274",
+                "cebef735.8202f8"
+            ]
+        ]
+    },
+    {
+        "id": "e110b0e1.1a4fe",
+        "type": "http in",
+        "z": "358ef6ec.b0595a",
+        "name": "",
+        "url": "/increment",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "6004ddf1.d8f614"
+            ]
+        ]
+    },
+    {
+        "id": "79885c3f.09c2e4",
+        "type": "http response",
+        "z": "358ef6ec.b0595a",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 800,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6004ddf1.d8f614",
+        "type": "http request",
+        "z": "358ef6ec.b0595a",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": true,
+        "url": "localhost:9428/api/increment",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "79885c3f.09c2e4"
+            ]
+        ]
+    },
+    {
+        "id": "a37af6ca.893ba8",
+        "type": "http in",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "url": "/former-students",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 100,
+        "wires": [
+            [
+                "8a5bc989.da8388"
+            ]
+        ]
+    },
+    {
+        "id": "ed9377a6.9e9218",
+        "type": "http response",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 840,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8a5bc989.da8388",
+        "type": "http request",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/former-students",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 570,
+        "y": 100,
+        "wires": [
+            [
+                "ed9377a6.9e9218"
+            ]
+        ]
+    },
+    {
+        "id": "9da533f5.3dd7",
+        "type": "http in",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "url": "/former-students",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "8e380910.5f6a68"
+            ]
+        ]
+    },
+    {
+        "id": "946bef07.95d15",
+        "type": "http response",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 840,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8e380910.5f6a68",
+        "type": "http request",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/former-students",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 570,
+        "y": 180,
+        "wires": [
+            [
+                "946bef07.95d15"
+            ]
+        ]
+    },
+    {
+        "id": "5b3308c8.1827b8",
+        "type": "http in",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "url": "/former-students/allFormerStudents",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "56f3e2f.7d9f11c"
+            ]
+        ]
+    },
+    {
+        "id": "491db8c2.ef1cc8",
+        "type": "http response",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 840,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "56f3e2f.7d9f11c",
+        "type": "http request",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/former-students/allFormerStudents",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "491db8c2.ef1cc8"
+            ]
+        ]
+    },
+    {
+        "id": "669ee856.71f218",
+        "type": "http in",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "url": "/former-students/available_countries",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 300,
+        "wires": [
+            [
+                "1c093b6.a8cb5c5"
+            ]
+        ]
+    },
+    {
+        "id": "bd8b53bd.37dcf",
+        "type": "http response",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 840,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "1c093b6.a8cb5c5",
+        "type": "http request",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/former-students/available_countries",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 570,
+        "y": 300,
+        "wires": [
+            [
+                "bd8b53bd.37dcf"
+            ]
+        ]
+    },
+    {
+        "id": "e28176bd.b34fa8",
+        "type": "http in",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "url": "/former-students/available_sections",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 360,
+        "wires": [
+            [
+                "b98bb84a.a05b48"
+            ]
+        ]
+    },
+    {
+        "id": "7e26733b.51a8dc",
+        "type": "http response",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 840,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b98bb84a.a05b48",
+        "type": "http request",
+        "z": "b54b351c.190ee8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/former-students/available_sections",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 570,
+        "y": 360,
+        "wires": [
+            [
+                "7e26733b.51a8dc"
+            ]
+        ]
+    },
+    {
+        "id": "ea5c7a41.6f72b8",
+        "type": "http in",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "url": "/agencies",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "c6bfe589.bf44b8"
+            ]
+        ]
+    },
+    {
+        "id": "e8209c9c.7e5f7",
+        "type": "http response",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c6bfe589.bf44b8",
+        "type": "http request",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/agencies",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "e8209c9c.7e5f7"
+            ]
+        ]
+    },
+    {
+        "id": "10994a7c.fbaed6",
+        "type": "http in",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "url": "/agencies",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "aaed5.88bae12b8"
+            ]
+        ]
+    },
+    {
+        "id": "7ad7b35a.6817bc",
+        "type": "http response",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aaed5.88bae12b8",
+        "type": "http request",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/agencies",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 140,
+        "wires": [
+            [
+                "7ad7b35a.6817bc"
+            ]
+        ]
+    },
+    {
+        "id": "cfe3852c.046348",
+        "type": "http in",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "url": "/agencies/available_countries",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 200,
+        "wires": [
+            [
+                "147b99f1.cc1926"
+            ]
+        ]
+    },
+    {
+        "id": "23e820b3.74a7f",
+        "type": "http response",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 780,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "147b99f1.cc1926",
+        "type": "http request",
+        "z": "39d9aae5.0e3326",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/agencies/available_countries",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "23e820b3.74a7f"
+            ]
+        ]
+    },
+    {
+        "id": "bdef6268.27f53",
+        "type": "http in",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "url": "/accommodations",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 60,
+        "wires": [
+            [
+                "3af50320.3856dc"
+            ]
+        ]
+    },
+    {
+        "id": "8a39e2e.f11c22",
+        "type": "http response",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 800,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3af50320.3856dc",
+        "type": "http request",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/accommodations",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 530,
+        "y": 60,
+        "wires": [
+            [
+                "8a39e2e.f11c22"
+            ]
+        ]
+    },
+    {
+        "id": "ec3cdbbc.e88278",
+        "type": "http in",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "url": "/accommodations",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "8f7deca6.716bd"
+            ]
+        ]
+    },
+    {
+        "id": "30412dcd.e0fb32",
+        "type": "http response",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 800,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8f7deca6.716bd",
+        "type": "http request",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/accommodations",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 530,
+        "y": 140,
+        "wires": [
+            [
+                "30412dcd.e0fb32"
+            ]
+        ]
+    },
+    {
+        "id": "a4187c36.a5ad4",
+        "type": "http in",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "url": "/accommodations/available_countries",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "4807f3e5.c491fc"
+            ]
+        ]
+    },
+    {
+        "id": "1e999e6c.d99d22",
+        "type": "http response",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 800,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4807f3e5.c491fc",
+        "type": "http request",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/accommodations/available_countries",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "1e999e6c.d99d22"
+            ]
+        ]
+    },
+    {
+        "id": "2e1d6718.970ce8",
+        "type": "http in",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "url": "/accommodations/max_surface",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 280,
+        "wires": [
+            [
+                "e08cec8.af3d61"
+            ]
+        ]
+    },
+    {
+        "id": "43cb3c32.808244",
+        "type": "http response",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e08cec8.af3d61",
+        "type": "http request",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/accommodations/max_surface",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "43cb3c32.808244"
+            ]
+        ]
+    },
+    {
+        "id": "590de9b6.97fae8",
+        "type": "http in",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "url": "/accommodations/max_price",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "d781f943.f397a8"
+            ]
+        ]
+    },
+    {
+        "id": "2f69a720.1ac768",
+        "type": "http response",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 800,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d781f943.f397a8",
+        "type": "http request",
+        "z": "d9641ef5.e8b3e",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "localhost:9428/api/accommodations/max_price",
+        "tls": "",
+        "proxy": "",
+        "authType": "basic",
+        "x": 530,
+        "y": 340,
+        "wires": [
+            [
+                "2f69a720.1ac768"
+            ]
+        ]
+    },
+    {
+        "id": "fa7cc37d.affcb",
+        "type": "function",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "func": "var io = global.get( 'socketio' );\n\nvar os = global.get( 'os' );\nvar networkInterfaces = os.networkInterfaces( );\n\nvar ip = networkInterfaces[\"Wi-Fi\"][1].address;\n\n\nconst socketF1 = io('http://192.168.43.58:1880');\nsocketF1.on('create', (data) => {\n      socketF1.emit('initIp', ip);\n});\n\nconst socketBack = io('http://' + ip +':9428');\nsocketBack.on('up', (data) => {\n      socketF1.emit('up', 'coucou');\n\n});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "999daa65.603458"
+            ]
+        ]
+    },
+    {
+        "id": "aec612c7.ee4fd",
+        "type": "inject",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 460,
+        "wires": [
+            [
+                "fa7cc37d.affcb"
+            ]
+        ]
+    },
+    {
+        "id": "999daa65.603458",
+        "type": "debug",
+        "z": "8e1f2faf.730e5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 470,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "cebef735.8202f8",
+        "type": "debug",
+        "z": "358ef6ec.b0595a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 810,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bd3e6352.4b81a",
+        "type": "function",
+        "z": "fc00c09a.0398b",
+        "name": "",
+        "func": "let temp = msg.payload;\nmsg.payload = {};\nmsg.payload.datas = temp;\nmsg.payload.studentId = msg.req.query.studentId\nconsole.log(\"payload\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "9578be09.72211"
+            ]
+        ]
+    }
+]
