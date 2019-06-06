@@ -41,8 +41,8 @@ router.post('/', CommonMids.catchError, (req, res) => {
   //   res.status(201).json(increment);
 });
 
-router.get('/:id', CommonMids.catchError, (req, res) => {
-  res.status(200).json(Admin.getFirstUnvalidatedAdminStage(req.param('id'), Internship.get()));
+router.get('/', CommonMids.catchError, (req, res) => {
+  res.status(200).json(Admin.getFirstUnvalidatedAdminStage(req.query.id, Internship.get()));
   
   // if (id == 15651565112) {
   //   console.log('12 a get');
