@@ -26,7 +26,7 @@ export class LoginService {
   socket;
   orchIp;
 
-  port = ':1881';
+  port = ':1880';
 
   initObs: BehaviorSubject<boolean> = new BehaviorSubject(this.isInit);
 
@@ -39,7 +39,7 @@ export class LoginService {
     });
 
     this.socket.on('create', (data) => {
-      console.log('data:', data);
+      console.log('create data:', data);
     });
 
     this.socket.on('initIp', (data) => {
