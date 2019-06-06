@@ -5,7 +5,8 @@ const CommonMids = require('../../utils/common-mids.js');
 const router = new Router();
 
 router.get('/first_unvalidated_internship', CommonMids.catchError, (req, res) => {
-	res.status(200).
+	res.status(200).json(Admin.getFirstUnvalidatedAdminStage(req.query.adminId, Internship.get()));
+});
 
 
 router.post('/connect', CommonMids.catchError, (req, res) => {
