@@ -1,58 +1,48 @@
-const { Router } = require('express');
-const { Increment, Admin, Internship } = require('../../models');
-const CommonMids = require('../../utils/common-mids.js');
+const { Router } = require("express");
+const { Increment, Admin, Internship } = require("../../models");
+const CommonMids = require("../../utils/common-mids.js");
 
 const router = new Router();
 
-router.post('/', CommonMids.catchError, (req, res) => {
+router.post("/", CommonMids.catchError, (req, res) => {
   const id = req.body.id;
+  let msg = "";
 
   if (id === undefined) {
-    throw err;
+    throw id;
   }
 
-  // const increment = Increment.increment();
-  const io = req.app.get('io');
-
-  const smap = req.app.get('smap');
-
-  Internship.setFirstValidity(id, true);
-
-  console.log(smap[id]);
-  if (smap[id] !== undefined) {
-    smap[id].emit('up', 'upped');
+  if (req.body.invalidate) {
+    Internship.setFirstValidity(id, true);
+    msg = "Correctly removed";
+  } else if (req.body.delay) {
+    const idI = Admin.getFirstUnvalidatedAdminStage(
+      req.body.id,
+      Internship.get()
+    ).id;
+    Internship.delete(idI);
+    msg = "Correctly delayed";
+  } else {
+    Internship.setFirstValidity(id, true);
+    msg = "Correctly validated";
   }
 
-    res.status(200).json('next internship');
+  // TODO lasocket
+  res.status(200).json(msg);
+  // const io = req.app.get('io');
 
+  // const smap = req.app.get('smap');
 
-  // if (id == 15651565112) {
-  //   console.log('12 a posté');
-
-  //   res.status(200).json(69);
-  // } else if (id == 15877166342) {
-  //   console.log('42 a posté');
-  //   res.status(200).json(96);
-  // } else {
-  //   res.status(403).json('Rip');
+  // console.log(smap[id]);
+  // if (smap[id] !== undefined) {
+  //   smap[id].emit('up', 'upped');
   // }
-
-  //   io.emit('mash', 'mashalla');
-  //   res.status(201).json(increment);
 });
 
-router.get('/:id', CommonMids.catchError, (req, res) => {
-  res.status(200).json(Admin.getFirstUnvalidatedAdminStage(req.param('id'), Internship.get()));
-  
-  // if (id == 15651565112) {
-  //   console.log('12 a get');
-  //   res.status(200).json(69);
-  // } else if (id == 15877166342) {
-  //   console.log('42 a get');
-  //   res.status(200).json(96);
-  // } else {
-  //   res.status(403).json('Rip');
-  // }
+router.get("/", CommonMids.catchError, (req, res) => {
+  res
+    .status(200)
+    .json(Admin.getFirstUnvalidatedAdminStage(req.body.id, Internship.get()));
 });
 
 module.exports = router;

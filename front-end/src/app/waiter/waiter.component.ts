@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TestServiceService } from 'src/services/test/test-service.service';
 import { CookieService } from 'ngx-cookie-service';
-import { InternshipService } from 'src/services/internship/internship.service';
 import { Internship } from '../../models/internship';
-
 
 @Component({
   selector: 'app-waiter',
@@ -18,6 +16,7 @@ export class WaiterComponent implements OnInit {
 
   constructor(public testService: TestServiceService, public cookieService: CookieService) {
     this.testService.listen();
+
     this.testService.incrementObs.subscribe((res) => {
       this.unvalidatedInternship = res;
     });
@@ -26,19 +25,19 @@ export class WaiterComponent implements OnInit {
     this.logged = cookieService.check('login');
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  getGreenDollarArray(costOfLife: number){
+  getGreenDollarArray(costOfLife: number) {
     let tab = [];
-    for(let i = 0; i<costOfLife; i++){
+    for (let i = 0; i < costOfLife; i++) {
       tab.push(i);
     }
     return tab;
   }
 
-  getGreyDollarArray(costOfLife: number){
+  getGreyDollarArray(costOfLife: number) {
     let tab = [];
-    for(let i = 0; i<5-costOfLife; i++){
+    for (let i = 0; i < 5 - costOfLife; i++) {
       tab.push(i);
     }
     return tab;

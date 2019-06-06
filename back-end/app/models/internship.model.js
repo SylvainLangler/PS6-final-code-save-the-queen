@@ -32,23 +32,23 @@ class InternshipModel extends BaseModel {
       tutorMail: Joi.string(),
       isValidated: Joi.boolean(),
       student: Joi.object(),
-      referent: Joi.object()
+      referent: Joi.object(),
     });
     this.filteredInternships = {};
   }
 
-  test(){
-    console.log("coucou");
+  test() {
+    console.log('coucou');
   }
 
 
   create(obj = {}, params = {}) {
-    let internship = super.create(obj);
+    const internship = super.create(obj);
     internship.isValidated = false;
     internship.student = FormerStudent.getById(params.studentId);
-    let admin = Admin.getLowestStageNumber();
+    const admin = Admin.getLowestStageNumber();
     admin.nb_stage += 1;
-    Admin.save()
+    Admin.save();
     internship.referent = admin;
     this.save();
     return internship;
@@ -68,7 +68,6 @@ class InternshipModel extends BaseModel {
   setFirstValidity(id, validity) {
     Admin.getFirstUnvalidatedAdminStage(id, this.items).isValidated = validity;
     this.save();
-    return ;
   }
 
   // Set the string to lower case, remove useless spaces and replace accents/diacritics with

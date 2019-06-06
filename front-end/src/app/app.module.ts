@@ -35,6 +35,7 @@ import { AccommodationFilterFormComponent } from './accommodations/accommodation
 import { WaiterComponent } from './waiter/waiter.component';
 import { LoginComponent } from './login/login.component';
 
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     AppRoutingModule // Import all dependencies
   ],
-  providers: [InternshipService, FormerStudentService], // All the services need to be provided
+  providers: [InternshipService, FormerStudentService, CookieService], // All the services need to be provided
   bootstrap: [AppComponent]
 })
 export class AppModule {}

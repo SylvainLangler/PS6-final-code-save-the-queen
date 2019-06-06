@@ -10,7 +10,7 @@ router.post('/connect', CommonMids.catchError, (req, res) => {
   if (connectedUser) {
     	res.status(200).json({ status: 'ok', id: connectedUser.id, token: connectedUser.token });
   } else {
-    	res.status(200).json({ status: 'ko', id: null, token: null});
+    	res.status(200).json({ status: 'ko', id: null, token: null });
   }
 });
 
