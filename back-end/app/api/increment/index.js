@@ -13,14 +13,14 @@ router.post("/", CommonMids.catchError, (req, res) => {
   }
 
   if (req.body.invalidate) {
-    Internship.setFirstValidity(id, true);
+    let idi = Admin.getFirstUnvalidatedAdminStage(req.body.id, Internship.get())
+      .id;
+    Internship.delete(idi);
     msg = "Correctly removed";
   } else if (req.body.delay) {
-    const idI = Admin.getFirstUnvalidatedAdminStage(
-      req.body.id,
-      Internship.get()
-    ).id;
-    Internship.delete(idI);
+    Internship.moveToLast(
+      Admin.getFirstUnvalidatedAdminStage(req.body.id, Internship.get())
+    );
     msg = "Correctly delayed";
   } else {
     Internship.setFirstValidity(id, true);
