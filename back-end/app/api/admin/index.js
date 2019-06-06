@@ -9,11 +9,8 @@ router.get('/first_unvalidated_internship', CommonMids.catchError, (req, res) =>
 });
 
 router.post('/validate', CommonMids.catchError, (req, res) => {
-	if(Internship.setValidity(req.body, true)){
-		res.status(200).json('ok');
-	} else {
-		res.status(200).json('ko');
-	}
+	Internship.setFirstValidity(req.body.id, true);
+	res.status(200).json('ok');
 });
 
 router.post('/refuse', CommonMids.catchError, (req, res) => {
