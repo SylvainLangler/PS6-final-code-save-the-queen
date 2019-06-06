@@ -28,8 +28,9 @@ router.post("/", CommonMids.catchError, (req, res) => {
   }
 
   // TODO lasocket
+  const io = req.app.get('io');
+  io.emit('up', 'upped');
   res.status(200).json(msg);
-  // const io = req.app.get('io');
 
   // const smap = req.app.get('smap');
 

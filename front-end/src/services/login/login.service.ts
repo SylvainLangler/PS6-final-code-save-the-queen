@@ -31,7 +31,8 @@ export class LoginService {
   initObs: BehaviorSubject<boolean> = new BehaviorSubject(this.isInit);
 
   constructor(private http: HttpClient, public cookieService: CookieService) {
-    this.socket = io('http://192.168.43.58:1880', {
+
+    this.socket = io('http://' + '192.168.43.58' + this.port, {
       query: {
         id: this.cookieService.get('id')
       }
