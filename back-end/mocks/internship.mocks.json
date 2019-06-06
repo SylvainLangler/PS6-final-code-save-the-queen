@@ -63,7 +63,7 @@
     "studentName": "Lato",
     "studentSurname": "Alexis",
     "tutorMail": "vertuoz@gmail.com",
-    "isValidated": false,
+    "isValidated": true,
     "student": {
       "firstName": "Alexis",
       "lastName": "Lato",

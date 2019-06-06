@@ -40,9 +40,7 @@ router.post("/", CommonMids.catchError, (req, res) => {
 });
 
 router.get("/", CommonMids.catchError, (req, res) => {
-  res
-    .status(200)
-    .json(Admin.getFirstUnvalidatedAdminStage(req.body.id, Internship.get()));
+  res.status(200).json(Admin.getFirstUnvalidatedAdminStage(req.query.id, Internship.get()));
 });
 
 module.exports = router;
