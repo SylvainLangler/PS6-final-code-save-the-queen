@@ -1,0 +1,3 @@
+[submodule "PS6-IOT-Android"]
+	path = PS6-IOT-Android
+	url = https://github.com/HouriRuben/PS6-IOT-Android.git
