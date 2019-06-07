@@ -1,0 +1,7 @@
+#Mon Jun 03 11:11:26 CEST 2019
+base.0=/Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=/Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/out

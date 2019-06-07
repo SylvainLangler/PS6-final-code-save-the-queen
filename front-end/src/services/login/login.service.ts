@@ -32,7 +32,7 @@ export class LoginService {
 
   constructor(private http: HttpClient, public cookieService: CookieService) {
 
-    this.socket = io('http://' + '192.168.43.58' + this.port, {
+    this.socket = io('http://' + '192.168.43.181' + this.port, {
       query: {
         id: this.cookieService.get('id')
       }
@@ -43,7 +43,6 @@ export class LoginService {
     });
 
     this.socket.on('initIp', (data) => {
-      console.log('mon ip:', data);
       this.initObs.next(true);
       this.orchIp = data;
       this.loginURL = 'http://' + this.orchIp + this.port + this.route;
