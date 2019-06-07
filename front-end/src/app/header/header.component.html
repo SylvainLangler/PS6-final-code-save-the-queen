@@ -3,7 +3,20 @@
       <li class="nav-item logo-nav"><a routerLinkActive="active" [routerLink]="[ '/accueil' ]" ><img class="logo" src="assets/images/logo-nav.png">POLYTECH ETRANGER</a></li>
       <li class="nav-space hamburger" (click)="toggleMobileMenu()"><i class="fas fa-bars fa-2x"></i></li>
       <li class="nav-item"><a [routerLink]="[ '/accueil' ]" routerLinkActive="active">Accueil</a></li>
-      <li class="nav-item"><a [routerLink]="[ '/stages' ]" routerLinkActive="active">Stages</a></li>
+      <li class="btn-group dropdown-logements" dropdown  routerLinkActive="active">
+        <div dropdownToggle class="dropdown-toggle">
+            <span>Stages</span>
+          <span class="caret"></span>
+        </div>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menuitem">
+            <a class="dropdown-item" href="#" [routerLink]="[ '/stages' ]" routerLinkActive="active">Stages</a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item" href="#" [routerLink]="[ '/stages/form' ]" routerLinkActive="active">Formulaire d'ajout</a>
+          </li>
+        </ul>
+      </li>
       <li class="btn-group dropdown-logements" dropdown  routerLinkActive="active">
           <div dropdownToggle class="dropdown-toggle">
               <span>Logements</span>
@@ -17,7 +30,7 @@
               <a class="dropdown-item" href="#" [routerLink]="[ '/logements' ]" routerLinkActive="active">Logements d'anciens étudiants</a>
             </li>
           </ul>
-        </li>
+      </li>
       <li class="nav-item"><a [routerLink]="[ '/anciens-eleves' ]" routerLinkActive="active">Etudiants</a></li>
       <li class="nav-item"><a [routerLink]="[ '/universites' ]" routerLinkActive="active">Universités</a></li>
       <li class="nav-item"><a [routerLink]="[ '/login' ]" routerLinkActive="active">Admin</a></li>
