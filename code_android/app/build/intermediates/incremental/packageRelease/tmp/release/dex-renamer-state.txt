@@ -1,4 +1,0 @@
-#Mon Jun 03 11:13:27 CEST 2019
-base.0=/Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/build/intermediates/dex/release/mergeDexRelease/out
-path.0=classes.dex
-renamed.0=classes.dex

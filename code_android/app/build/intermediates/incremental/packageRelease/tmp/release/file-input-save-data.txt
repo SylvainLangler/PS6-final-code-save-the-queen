@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Mon Jun 03 11:13:27 CEST 2019
-0.baseType=DIRECTORY
-0.base=/Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/build/intermediates/dex/release/mergeDexRelease/out
-0.path=classes.dex
-0.set=DEX
-count=1
