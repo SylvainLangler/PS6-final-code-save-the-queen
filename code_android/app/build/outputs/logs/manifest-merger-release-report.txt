@@ -1,0 +1,196 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+MERGED from [com.android.support:design:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/e2a092d15a3e87816e23e47a3cd68f9d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/6125235490f045890f2a1745f0e9f917/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/33a5c5b4c1570df20653d4d5e53a23ca/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/a646d797d33befde78fb69d9a55235b4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/036d5e6feed9b0b2132233d8e5c95591/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/c01592f4c5fbdf4b82471cc99c250ee2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/ea63fbf67a41b954f950acdac91f6cf7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/69641ac2d09af024f5d5e5c39e7ce6c7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/d2836a3d1f7b23ee3c2456ff7da448ac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/df664598a38314a3f2f28929fbb16cd9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/ad3f13e71bf716cddfc678f9835c2269/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/9fd6cb2830a0460813153049379afe2c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3eadfa4a6410d354c4216cc474784eac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/7aeeda22014fdf19181caec921ea188e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/7c531a2807ef4ed39baa13250c6b4831/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/4dc4c725456f307eda121c6812df8532/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/140cd22ca322fc264c425cfee5ca6f41/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/8a78d6236fbb18d1bf81976af762ccf3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3a70f12d06ace8d8afa76fa7975607ab/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/362526e815f7aa070232196408427b7e/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/b68a834ab1525d79b952703aba9e3a42/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/6ea4e7a93d4589c4c97211c5cc6372ca/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/98c50b79f96c0e0518b15a0d42a12f73/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/c192eafb1fcb0781755152c6f247d9d1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/07ed606f1401714774b42a9b7e5d930d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/1feeddc72dcdc9736fea0c922a98a105/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/b3b1d4fd3b6ab097a988ed15b564aafb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/f1d04d09a9b31d5f01845bf9c0f74085/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/275b9327508f7688a992b73806d0937a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/646ef2e6c6dde73789c5267bb0c9b85d/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/01e99bb4d81a4fecc02ca60c5c83486a/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+	package
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:3:5-42
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:1-34:12
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:5:5-71
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:5:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:6:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:7:5-72
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:7:22-69
+application
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:9:5-32:19
+MERGED from [com.android.support:design:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/e2a092d15a3e87816e23e47a3cd68f9d/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/e2a092d15a3e87816e23e47a3cd68f9d/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/33a5c5b4c1570df20653d4d5e53a23ca/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/33a5c5b4c1570df20653d4d5e53a23ca/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3a70f12d06ace8d8afa76fa7975607ab/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3a70f12d06ace8d8afa76fa7975607ab/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/362526e815f7aa070232196408427b7e/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/362526e815f7aa070232196408427b7e/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3a70f12d06ace8d8afa76fa7975607ab/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:14:9-35
+	android:label
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:12:9-41
+	android:roundIcon
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:13:9-54
+	android:icon
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:15:9-40
+activity#com.code_save_the_queen.ps6.ButtonActivity
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:16:9-17:61
+	android:screenOrientation
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:17:13-49
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:16:19-49
+activity#com.code_save_the_queen.ps6.LoginActivity
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:18:9-27:20
+	android:screenOrientation
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:21:13-49
+	android:label
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:20:13-45
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:19:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:25:27-74
+meta-data#preloaded_fonts
+ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:29:9-31:57
+	android:resource
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:31:13-54
+	android:name
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml:30:13-43
+uses-sdk
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/e2a092d15a3e87816e23e47a3cd68f9d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/e2a092d15a3e87816e23e47a3cd68f9d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/6125235490f045890f2a1745f0e9f917/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/6125235490f045890f2a1745f0e9f917/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/33a5c5b4c1570df20653d4d5e53a23ca/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/33a5c5b4c1570df20653d4d5e53a23ca/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/a646d797d33befde78fb69d9a55235b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/a646d797d33befde78fb69d9a55235b4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/036d5e6feed9b0b2132233d8e5c95591/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/036d5e6feed9b0b2132233d8e5c95591/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/c01592f4c5fbdf4b82471cc99c250ee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/c01592f4c5fbdf4b82471cc99c250ee2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/ea63fbf67a41b954f950acdac91f6cf7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/ea63fbf67a41b954f950acdac91f6cf7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/69641ac2d09af024f5d5e5c39e7ce6c7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/69641ac2d09af024f5d5e5c39e7ce6c7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/d2836a3d1f7b23ee3c2456ff7da448ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/d2836a3d1f7b23ee3c2456ff7da448ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/df664598a38314a3f2f28929fbb16cd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/df664598a38314a3f2f28929fbb16cd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/ad3f13e71bf716cddfc678f9835c2269/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/ad3f13e71bf716cddfc678f9835c2269/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/9fd6cb2830a0460813153049379afe2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/9fd6cb2830a0460813153049379afe2c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3eadfa4a6410d354c4216cc474784eac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3eadfa4a6410d354c4216cc474784eac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/7aeeda22014fdf19181caec921ea188e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/7aeeda22014fdf19181caec921ea188e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/7c531a2807ef4ed39baa13250c6b4831/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/7c531a2807ef4ed39baa13250c6b4831/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/4dc4c725456f307eda121c6812df8532/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/4dc4c725456f307eda121c6812df8532/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/140cd22ca322fc264c425cfee5ca6f41/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/140cd22ca322fc264c425cfee5ca6f41/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/8a78d6236fbb18d1bf81976af762ccf3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/8a78d6236fbb18d1bf81976af762ccf3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3a70f12d06ace8d8afa76fa7975607ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/3a70f12d06ace8d8afa76fa7975607ab/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/362526e815f7aa070232196408427b7e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/362526e815f7aa070232196408427b7e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/b68a834ab1525d79b952703aba9e3a42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/b68a834ab1525d79b952703aba9e3a42/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/6ea4e7a93d4589c4c97211c5cc6372ca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/6ea4e7a93d4589c4c97211c5cc6372ca/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/98c50b79f96c0e0518b15a0d42a12f73/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/98c50b79f96c0e0518b15a0d42a12f73/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/c192eafb1fcb0781755152c6f247d9d1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/c192eafb1fcb0781755152c6f247d9d1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/07ed606f1401714774b42a9b7e5d930d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/07ed606f1401714774b42a9b7e5d930d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/1feeddc72dcdc9736fea0c922a98a105/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/1feeddc72dcdc9736fea0c922a98a105/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/b3b1d4fd3b6ab097a988ed15b564aafb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/b3b1d4fd3b6ab097a988ed15b564aafb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/f1d04d09a9b31d5f01845bf9c0f74085/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/f1d04d09a9b31d5f01845bf9c0f74085/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/275b9327508f7688a992b73806d0937a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/275b9327508f7688a992b73806d0937a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/646ef2e6c6dde73789c5267bb0c9b85d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/646ef2e6c6dde73789c5267bb0c9b85d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/01e99bb4d81a4fecc02ca60c5c83486a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/rubenhouri/.gradle/caches/transforms-2/files-2.1/01e99bb4d81a4fecc02ca60c5c83486a/AndroidManifest.xml:20:5-44
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rubenhouri/Desktop/PS6-Final/PS6-final-code-save-the-queen/android/app/src/main/AndroidManifest.xml
