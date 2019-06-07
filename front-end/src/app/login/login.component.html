@@ -1,5 +1,5 @@
-<div *ngIf="!isInit">
-  <h2 class="text-center">En attente du serveur...</h2>
+<div id="wait" *ngIf="!isInit">
+  <h2 class="text-center wait">En attente du serveur...</h2>
 </div>
 <div *ngIf="isInit">
 
@@ -17,7 +17,7 @@
 
         <p *ngIf="failed" style="color: red"> L'identifiant et/ou le mot de passe sont incorrects. Veuillez réessayer
         </p>
-        <p *ngIf="isAuthenticated" style="color: green">Waouw</p>
+        <!-- <p *ngIf="isAuthenticated" style="color: green">Waouw</p> -->
       </form>
 
     </div>
